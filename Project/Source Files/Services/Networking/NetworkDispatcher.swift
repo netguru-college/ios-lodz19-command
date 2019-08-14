@@ -28,7 +28,8 @@ final class NetworkDispatcher: NSObject, Dispatcher {
             if let error = error {
                 completion(.failure(error))
             }
-            // If there are no errors, unwrap data, decode it with a given Decodable type and call completion depending on decoding's result.
+            // If there are no errors, unwrap data, decode it with a given Decodable type
+            // and call completion depending on decoding's result.
             else if let data = data {
                 do {
                     let encodable = try JSONDecoder().decode(T.self, from: data)
