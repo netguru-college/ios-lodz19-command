@@ -1,8 +1,7 @@
-# Pod sources
-source 'https://github.com/CocoaPods/Specs.git'
-
 # Initial configuration
 platform :ios, '12.2'
+use_frameworks!
+inhibit_all_warnings!
 
 target 'NetguruCollegeApp' do
 	# Put new pods here
