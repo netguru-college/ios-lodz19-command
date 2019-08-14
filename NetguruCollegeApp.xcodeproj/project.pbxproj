@@ -1,0 +1,486 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4EF6846721E6438300DA50FC /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF6846121E6438300DA50FC /* HTTPMethod.swift */; };
+		4EF6846921E6438300DA50FC /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF6846321E6438300DA50FC /* Request.swift */; };
+		4EF6846B21E6438300DA50FC /* URLRequestConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF6846521E6438300DA50FC /* URLRequestConvertible.swift */; };
+		4EF6846C21E6438300DA50FC /* NetworkDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF6846621E6438300DA50FC /* NetworkDispatcher.swift */; };
+		696FE498217635CB005C9FDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FE497217635CB005C9FDD /* AppDelegate.swift */; };
+		696FE49A217635CB005C9FDD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FE499217635CB005C9FDD /* ViewController.swift */; };
+		696FE49D217635CB005C9FDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 696FE49B217635CB005C9FDD /* Main.storyboard */; };
+		696FE49F217635D2005C9FDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 696FE49E217635D2005C9FDD /* Assets.xcassets */; };
+		696FE4A2217635D2005C9FDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 696FE4A0217635D2005C9FDD /* LaunchScreen.storyboard */; };
+		696FE4AD217635D2005C9FDD /* NetguruCollegeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FE4AC217635D2005C9FDD /* NetguruCollegeAppTests.swift */; };
+		E78284C3A0A16BABA05F80C0 /* libPods-NetguruCollegeApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1896E56EE9B45B86258E71A /* libPods-NetguruCollegeApp.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		696FE4A9217635D2005C9FDD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 696FE48C217635CB005C9FDD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 696FE493217635CB005C9FDD;
+			remoteInfo = "ncc-ios";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4EF6846121E6438300DA50FC /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		4EF6846321E6438300DA50FC /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		4EF6846521E6438300DA50FC /* URLRequestConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLRequestConvertible.swift; sourceTree = "<group>"; };
+		4EF6846621E6438300DA50FC /* NetworkDispatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkDispatcher.swift; sourceTree = "<group>"; };
+		696FE494217635CB005C9FDD /* NetguruCollegeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetguruCollegeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		696FE497217635CB005C9FDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		696FE499217635CB005C9FDD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		696FE49C217635CB005C9FDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		696FE49E217635D2005C9FDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		696FE4A1217635D2005C9FDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		696FE4A3217635D2005C9FDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		696FE4A8217635D2005C9FDD /* NetguruCollegeApp Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NetguruCollegeApp Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		696FE4AC217635D2005C9FDD /* NetguruCollegeAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetguruCollegeAppTests.swift; sourceTree = "<group>"; };
+		696FE4AE217635D2005C9FDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70B9FAC81C5FF8A335FA5053 /* Pods-NetguruCollegeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetguruCollegeApp.debug.xcconfig"; path = "Target Support Files/Pods-NetguruCollegeApp/Pods-NetguruCollegeApp.debug.xcconfig"; sourceTree = "<group>"; };
+		B70CCCFD923A49BB70EE7D09 /* Pods-NetguruCollegeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetguruCollegeApp.release.xcconfig"; path = "Target Support Files/Pods-NetguruCollegeApp/Pods-NetguruCollegeApp.release.xcconfig"; sourceTree = "<group>"; };
+		D1896E56EE9B45B86258E71A /* libPods-NetguruCollegeApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NetguruCollegeApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		696FE491217635CB005C9FDD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E78284C3A0A16BABA05F80C0 /* libPods-NetguruCollegeApp.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		696FE4A5217635D2005C9FDD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4EF6845F21E6435400DA50FC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4EF6846021E6438300DA50FC /* Networking */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		4EF6846021E6438300DA50FC /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				4EF6846121E6438300DA50FC /* HTTPMethod.swift */,
+				4EF6846321E6438300DA50FC /* Request.swift */,
+				4EF6846521E6438300DA50FC /* URLRequestConvertible.swift */,
+				4EF6846621E6438300DA50FC /* NetworkDispatcher.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		5EC86D1AC6F92BE513E78EC0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				70B9FAC81C5FF8A335FA5053 /* Pods-NetguruCollegeApp.debug.xcconfig */,
+				B70CCCFD923A49BB70EE7D09 /* Pods-NetguruCollegeApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		696FE48B217635CB005C9FDD = {
+			isa = PBXGroup;
+			children = (
+				696FE4B7217637B5005C9FDD /* Project */,
+				696FE4BE2176387E005C9FDD /* Supporting files */,
+				696FE4AB217635D2005C9FDD /* Unit Tests */,
+				696FE495217635CB005C9FDD /* Products */,
+				5EC86D1AC6F92BE513E78EC0 /* Pods */,
+				D78ED9CC3C02DDC356B00910 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		696FE495217635CB005C9FDD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				696FE494217635CB005C9FDD /* NetguruCollegeApp.app */,
+				696FE4A8217635D2005C9FDD /* NetguruCollegeApp Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		696FE4AB217635D2005C9FDD /* Unit Tests */ = {
+			isa = PBXGroup;
+			children = (
+				696FE4AC217635D2005C9FDD /* NetguruCollegeAppTests.swift */,
+				696FE4AE217635D2005C9FDD /* Info.plist */,
+			);
+			path = "Unit Tests";
+			sourceTree = "<group>";
+		};
+		696FE4B7217637B5005C9FDD /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				696FE4BF217638AD005C9FDD /* Application */,
+				696FE4B8217637C7005C9FDD /* Source Files */,
+				696FE4BC217637FB005C9FDD /* Interfaces */,
+				696FE4BD21763812005C9FDD /* Resources */,
+			);
+			path = Project;
+			sourceTree = "<group>";
+		};
+		696FE4B8217637C7005C9FDD /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				4EF6845F21E6435400DA50FC /* Services */,
+				696FE4B9217637D5005C9FDD /* View Controllers */,
+				696FE4BB217637E8005C9FDD /* Views */,
+			);
+			path = "Source Files";
+			sourceTree = "<group>";
+		};
+		696FE4B9217637D5005C9FDD /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				696FE499217635CB005C9FDD /* ViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		696FE4BB217637E8005C9FDD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		696FE4BC217637FB005C9FDD /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				696FE4A0217635D2005C9FDD /* LaunchScreen.storyboard */,
+				696FE49B217635CB005C9FDD /* Main.storyboard */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		696FE4BD21763812005C9FDD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				696FE49E217635D2005C9FDD /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		696FE4BE2176387E005C9FDD /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				696FE4A3217635D2005C9FDD /* Info.plist */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		696FE4BF217638AD005C9FDD /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				696FE497217635CB005C9FDD /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		D78ED9CC3C02DDC356B00910 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D1896E56EE9B45B86258E71A /* libPods-NetguruCollegeApp.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		696FE493217635CB005C9FDD /* NetguruCollegeApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 696FE4B1217635D2005C9FDD /* Build configuration list for PBXNativeTarget "NetguruCollegeApp" */;
+			buildPhases = (
+				9DA1A4651AAA7DE86DDDE3DA /* [CP] Check Pods Manifest.lock */,
+				696FE490217635CB005C9FDD /* Sources */,
+				696FE491217635CB005C9FDD /* Frameworks */,
+				696FE492217635CB005C9FDD /* Resources */,
+				699E0A862177DE4000B2A204 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NetguruCollegeApp;
+			productName = "ncc-ios";
+			productReference = 696FE494217635CB005C9FDD /* NetguruCollegeApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		696FE4A7217635D2005C9FDD /* NetguruCollegeAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 696FE4B4217635D2005C9FDD /* Build configuration list for PBXNativeTarget "NetguruCollegeAppTests" */;
+			buildPhases = (
+				696FE4A4217635D2005C9FDD /* Sources */,
+				696FE4A5217635D2005C9FDD /* Frameworks */,
+				696FE4A6217635D2005C9FDD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				696FE4AA217635D2005C9FDD /* PBXTargetDependency */,
+			);
+			name = NetguruCollegeAppTests;
+			productName = "ncc-iosTests";
+			productReference = 696FE4A8217635D2005C9FDD /* NetguruCollegeApp Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		696FE48C217635CB005C9FDD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = Netguru;
+				TargetAttributes = {
+					696FE493217635CB005C9FDD = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					696FE4A7217635D2005C9FDD = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 696FE493217635CB005C9FDD;
+					};
+				};
+			};
+			buildConfigurationList = 696FE48F217635CB005C9FDD /* Build configuration list for PBXProject "NetguruCollegeApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 696FE48B217635CB005C9FDD;
+			productRefGroup = 696FE495217635CB005C9FDD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				696FE493217635CB005C9FDD /* NetguruCollegeApp */,
+				696FE4A7217635D2005C9FDD /* NetguruCollegeAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		696FE492217635CB005C9FDD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				696FE4A2217635D2005C9FDD /* LaunchScreen.storyboard in Resources */,
+				696FE49F217635D2005C9FDD /* Assets.xcassets in Resources */,
+				696FE49D217635CB005C9FDD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		696FE4A6217635D2005C9FDD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		699E0A862177DE4000B2A204 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"error: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		9DA1A4651AAA7DE86DDDE3DA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NetguruCollegeApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		696FE490217635CB005C9FDD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EF6846B21E6438300DA50FC /* URLRequestConvertible.swift in Sources */,
+				696FE49A217635CB005C9FDD /* ViewController.swift in Sources */,
+				4EF6846C21E6438300DA50FC /* NetworkDispatcher.swift in Sources */,
+				4EF6846921E6438300DA50FC /* Request.swift in Sources */,
+				696FE498217635CB005C9FDD /* AppDelegate.swift in Sources */,
+				4EF6846721E6438300DA50FC /* HTTPMethod.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		696FE4A4217635D2005C9FDD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				696FE4AD217635D2005C9FDD /* NetguruCollegeAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		696FE4AA217635D2005C9FDD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 696FE493217635CB005C9FDD /* NetguruCollegeApp */;
+			targetProxy = 696FE4A9217635D2005C9FDD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		696FE49B217635CB005C9FDD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				696FE49C217635CB005C9FDD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		696FE4A0217635D2005C9FDD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				696FE4A1217635D2005C9FDD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		696FE4AF217635D2005C9FDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		696FE4B0217635D2005C9FDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		696FE4B2217635D2005C9FDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70B9FAC81C5FF8A335FA5053 /* Pods-NetguruCollegeApp.debug.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = "$(SRCROOT)/Supporting files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.netguru.netguru.college.app;
+				PRODUCT_NAME = NetguruCollegeApp;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		696FE4B3217635D2005C9FDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B70CCCFD923A49BB70EE7D09 /* Pods-NetguruCollegeApp.release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = "$(SRCROOT)/Supporting files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.netguru.netguru.college.app;
+				PRODUCT_NAME = NetguruCollegeApp;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		696FE4B5217635D2005C9FDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "NetguruCollegeApp Tests";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		696FE4B6217635D2005C9FDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "NetguruCollegeApp Tests";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		696FE48F217635CB005C9FDD /* Build configuration list for PBXProject "NetguruCollegeApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				696FE4AF217635D2005C9FDD /* Debug */,
+				696FE4B0217635D2005C9FDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		696FE4B1217635D2005C9FDD /* Build configuration list for PBXNativeTarget "NetguruCollegeApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				696FE4B2217635D2005C9FDD /* Debug */,
+				696FE4B3217635D2005C9FDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		696FE4B4217635D2005C9FDD /* Build configuration list for PBXNativeTarget "NetguruCollegeAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				696FE4B5217635D2005C9FDD /* Debug */,
+				696FE4B6217635D2005C9FDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 696FE48C217635CB005C9FDD /* Project object */;
+}
