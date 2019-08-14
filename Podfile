@@ -2,7 +2,7 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
 # Initial configuration
-platform :ios, '10.0'
+platform :ios, '12.2'
 
 target 'NetguruCollegeApp' do
 	# Put new pods here

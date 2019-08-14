@@ -11,7 +11,7 @@ Welcome to the **NetguruCollegeApp** project. It is a base application created f
 
 ## Tools 
 
-- Xcode 10.2.1 with latest iOS SDK (12.1)
+- Xcode 10.2.1 with latest iOS SDK (12.2)
 - [CocoaPods](https://github.com/CocoaPods/CocoaPods) 1.7.5 or higher
 
 ### Prerequisites
