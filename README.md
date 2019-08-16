@@ -2,6 +2,8 @@
 
 Welcome to the **NetguruCollegeApp** project. It is a base application created for Netguru College: iOS Weekend Edition workshops.
 
+![](https://user-images.githubusercontent.com/18245585/63163668-5e9abc00-c026-11e9-87ad-3c5a761ca23b.png)
+
 ## Team
 
 * [Anna-Mariia Shkarlinska](mailto:anna-mariia.shkarlinska@netguru.com) - Project leader, Mentor
