@@ -8,16 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		2E5CB7214B4A78251C20EA48 /* Pods_NetguruCollegeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5917DB1E95701B4EE6BDDCAF /* Pods_NetguruCollegeApp.framework */; };
-		4EF6846721E6438300DA50FC /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF6846121E6438300DA50FC /* HTTPMethod.swift */; };
-		4EF6846921E6438300DA50FC /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF6846321E6438300DA50FC /* Request.swift */; };
-		4EF6846B21E6438300DA50FC /* URLRequestConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF6846521E6438300DA50FC /* URLRequestConvertible.swift */; };
-		4EF6846C21E6438300DA50FC /* NetworkDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF6846621E6438300DA50FC /* NetworkDispatcher.swift */; };
 		696FE498217635CB005C9FDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FE497217635CB005C9FDD /* AppDelegate.swift */; };
-		696FE49A217635CB005C9FDD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FE499217635CB005C9FDD /* ViewController.swift */; };
 		696FE49D217635CB005C9FDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 696FE49B217635CB005C9FDD /* Main.storyboard */; };
 		696FE49F217635D2005C9FDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 696FE49E217635D2005C9FDD /* Assets.xcassets */; };
 		696FE4A2217635D2005C9FDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 696FE4A0217635D2005C9FDD /* LaunchScreen.storyboard */; };
 		696FE4AD217635D2005C9FDD /* NetguruCollegeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FE4AC217635D2005C9FDD /* NetguruCollegeAppTests.swift */; };
+		E814F7DD2310712B00788FA9 /* FlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E814F7DC2310712B00788FA9 /* FlowCoordinator.swift */; };
+		E814F7E22310713600788FA9 /* APIMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = E814F7DE2310713600788FA9 /* APIMethod.swift */; };
+		E814F7E32310713600788FA9 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E814F7DF2310713600788FA9 /* ApiClient.swift */; };
+		E814F7E42310713600788FA9 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E814F7E02310713600788FA9 /* APIError.swift */; };
+		E814F7E52310713600788FA9 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E814F7E12310713600788FA9 /* APIRequest.swift */; };
+		E814F7E82310714300788FA9 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E814F7E62310714300788FA9 /* WelcomeViewController.swift */; };
+		E814F7E92310714300788FA9 /* HelloWorldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E814F7E72310714300788FA9 /* HelloWorldViewController.swift */; };
+		E814F7ED2310716000788FA9 /* HelloWorldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E814F7EC2310716000788FA9 /* HelloWorldView.swift */; };
+		E814F7EF2310716700788FA9 /* HelloWorldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E814F7EE2310716700788FA9 /* HelloWorldView.xib */; };
+		E814F7F12310716D00788FA9 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E814F7F02310716D00788FA9 /* WelcomeView.swift */; };
+		E814F7F32310717400788FA9 /* WelcomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E814F7F22310717400788FA9 /* WelcomeView.xib */; };
+		E814F7F52310719E00788FA9 /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E814F7F42310719D00788FA9 /* AppFlowCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,14 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4EF6846121E6438300DA50FC /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
-		4EF6846321E6438300DA50FC /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
-		4EF6846521E6438300DA50FC /* URLRequestConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLRequestConvertible.swift; sourceTree = "<group>"; };
-		4EF6846621E6438300DA50FC /* NetworkDispatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkDispatcher.swift; sourceTree = "<group>"; };
 		5917DB1E95701B4EE6BDDCAF /* Pods_NetguruCollegeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetguruCollegeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		696FE494217635CB005C9FDD /* NetguruCollegeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetguruCollegeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		696FE497217635CB005C9FDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		696FE499217635CB005C9FDD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		696FE49C217635CB005C9FDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		696FE49E217635D2005C9FDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		696FE4A1217635D2005C9FDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -48,6 +50,18 @@
 		696FE4AE217635D2005C9FDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70B9FAC81C5FF8A335FA5053 /* Pods-NetguruCollegeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetguruCollegeApp.debug.xcconfig"; path = "Target Support Files/Pods-NetguruCollegeApp/Pods-NetguruCollegeApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B70CCCFD923A49BB70EE7D09 /* Pods-NetguruCollegeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetguruCollegeApp.release.xcconfig"; path = "Target Support Files/Pods-NetguruCollegeApp/Pods-NetguruCollegeApp.release.xcconfig"; sourceTree = "<group>"; };
+		E814F7DC2310712B00788FA9 /* FlowCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowCoordinator.swift; sourceTree = "<group>"; };
+		E814F7DE2310713600788FA9 /* APIMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIMethod.swift; sourceTree = "<group>"; };
+		E814F7DF2310713600788FA9 /* ApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		E814F7E02310713600788FA9 /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		E814F7E12310713600788FA9 /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		E814F7E62310714300788FA9 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		E814F7E72310714300788FA9 /* HelloWorldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelloWorldViewController.swift; sourceTree = "<group>"; };
+		E814F7EC2310716000788FA9 /* HelloWorldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelloWorldView.swift; sourceTree = "<group>"; };
+		E814F7EE2310716700788FA9 /* HelloWorldView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HelloWorldView.xib; sourceTree = "<group>"; };
+		E814F7F02310716D00788FA9 /* WelcomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		E814F7F22310717400788FA9 /* WelcomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeView.xib; sourceTree = "<group>"; };
+		E814F7F42310719D00788FA9 /* AppFlowCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppFlowCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,10 +94,10 @@
 		4EF6846021E6438300DA50FC /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				4EF6846121E6438300DA50FC /* HTTPMethod.swift */,
-				4EF6846321E6438300DA50FC /* Request.swift */,
-				4EF6846521E6438300DA50FC /* URLRequestConvertible.swift */,
-				4EF6846621E6438300DA50FC /* NetworkDispatcher.swift */,
+				E814F7DF2310713600788FA9 /* ApiClient.swift */,
+				E814F7E02310713600788FA9 /* APIError.swift */,
+				E814F7DE2310713600788FA9 /* APIMethod.swift */,
+				E814F7E12310713600788FA9 /* APIRequest.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -141,26 +155,20 @@
 		696FE4B8217637C7005C9FDD /* Source Files */ = {
 			isa = PBXGroup;
 			children = (
+				E814F7DB2310712200788FA9 /* Base classes */,
 				4EF6845F21E6435400DA50FC /* Services */,
-				696FE4B9217637D5005C9FDD /* View Controllers */,
-				696FE4BB217637E8005C9FDD /* Views */,
+				696FE4B9217637D5005C9FDD /* Screens */,
 			);
 			path = "Source Files";
 			sourceTree = "<group>";
 		};
-		696FE4B9217637D5005C9FDD /* View Controllers */ = {
+		696FE4B9217637D5005C9FDD /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				696FE499217635CB005C9FDD /* ViewController.swift */,
+				E814F7EB2310714E00788FA9 /* Welcome */,
+				E814F7EA2310714500788FA9 /* HelloWorld */,
 			);
-			path = "View Controllers";
-			sourceTree = "<group>";
-		};
-		696FE4BB217637E8005C9FDD /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
+			path = Screens;
 			sourceTree = "<group>";
 		};
 		696FE4BC217637FB005C9FDD /* Interfaces */ = {
@@ -192,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				696FE497217635CB005C9FDD /* AppDelegate.swift */,
+				E814F7F42310719D00788FA9 /* AppFlowCoordinator.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -202,6 +211,34 @@
 				5917DB1E95701B4EE6BDDCAF /* Pods_NetguruCollegeApp.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E814F7DB2310712200788FA9 /* Base classes */ = {
+			isa = PBXGroup;
+			children = (
+				E814F7DC2310712B00788FA9 /* FlowCoordinator.swift */,
+			);
+			path = "Base classes";
+			sourceTree = "<group>";
+		};
+		E814F7EA2310714500788FA9 /* HelloWorld */ = {
+			isa = PBXGroup;
+			children = (
+				E814F7E72310714300788FA9 /* HelloWorldViewController.swift */,
+				E814F7EC2310716000788FA9 /* HelloWorldView.swift */,
+				E814F7EE2310716700788FA9 /* HelloWorldView.xib */,
+			);
+			path = HelloWorld;
+			sourceTree = "<group>";
+		};
+		E814F7EB2310714E00788FA9 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				E814F7E62310714300788FA9 /* WelcomeViewController.swift */,
+				E814F7F02310716D00788FA9 /* WelcomeView.swift */,
+				E814F7F22310717400788FA9 /* WelcomeView.xib */,
+			);
+			path = Welcome;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,7 +325,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				696FE4A2217635D2005C9FDD /* LaunchScreen.storyboard in Resources */,
+				E814F7F32310717400788FA9 /* WelcomeView.xib in Resources */,
 				696FE49F217635D2005C9FDD /* Assets.xcassets in Resources */,
+				E814F7EF2310716700788FA9 /* HelloWorldView.xib in Resources */,
 				696FE49D217635CB005C9FDD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,12 +389,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EF6846B21E6438300DA50FC /* URLRequestConvertible.swift in Sources */,
-				696FE49A217635CB005C9FDD /* ViewController.swift in Sources */,
-				4EF6846C21E6438300DA50FC /* NetworkDispatcher.swift in Sources */,
-				4EF6846921E6438300DA50FC /* Request.swift in Sources */,
+				E814F7DD2310712B00788FA9 /* FlowCoordinator.swift in Sources */,
 				696FE498217635CB005C9FDD /* AppDelegate.swift in Sources */,
-				4EF6846721E6438300DA50FC /* HTTPMethod.swift in Sources */,
+				E814F7E22310713600788FA9 /* APIMethod.swift in Sources */,
+				E814F7E42310713600788FA9 /* APIError.swift in Sources */,
+				E814F7E92310714300788FA9 /* HelloWorldViewController.swift in Sources */,
+				E814F7F12310716D00788FA9 /* WelcomeView.swift in Sources */,
+				E814F7E52310713600788FA9 /* APIRequest.swift in Sources */,
+				E814F7E32310713600788FA9 /* ApiClient.swift in Sources */,
+				E814F7E82310714300788FA9 /* WelcomeViewController.swift in Sources */,
+				E814F7F52310719E00788FA9 /* AppFlowCoordinator.swift in Sources */,
+				E814F7ED2310716000788FA9 /* HelloWorldView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
