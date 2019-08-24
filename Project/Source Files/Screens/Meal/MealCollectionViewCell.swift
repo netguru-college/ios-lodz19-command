@@ -26,6 +26,7 @@ class MealCollectionViewCell: UICollectionViewCell {
     
     let mealImageView: UIImageView = {
         var mealImageView = UIImageView()
+        mealImageView.translatesAutoresizingMaskIntoConstraints = true
         return mealImageView
     }()
 
