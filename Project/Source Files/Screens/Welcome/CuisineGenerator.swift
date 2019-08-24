@@ -39,5 +39,4 @@ struct CuisineGenerator {
     func getRandom() -> String? {
         return cuisineList.randomElement()
     }
-
 }

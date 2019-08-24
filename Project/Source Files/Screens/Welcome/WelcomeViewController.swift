@@ -19,8 +19,9 @@ final class WelcomeViewController: UIViewController {
 
     private var generatedCousine: String?
 
-    init() {
+    init(delegate: WelcomeViewControllerDelegate) {
         super.init(nibName: nil, bundle: nil)
+        self.delegate = delegate
         setupCallBacks()
     }
 
@@ -34,6 +35,7 @@ final class WelcomeViewController: UIViewController {
 
     private func setupCallBacks () {
         customView.randomButton.addTarget(self, action: #selector(didTapRandomButton), for: .touchUpInside)
+        customView.nextScreenButton.addTarget(self, action: #selector(didTapNext), for: .touchUpInside)
     }
 
     @objc private func didTapRandomButton() {

@@ -21,7 +21,15 @@ final class AppFlowCoordinator: FlowCoordinator {
     }
 
     private func runWelcomeScreen() {
-        let viewController = WelcomeViewController()
+        let viewController = WelcomeViewController(delegate: self)
+        rootViewController.show(viewController, sender: nil)
+    }
+
+    private func runMealViewController(with cousine: String) {
+        let viewController = MealCollectionViewController(
+            mealViewModel: MealViewModel(cousine: cousine),
+            delegate: self
+        )
         rootViewController.show(viewController, sender: nil)
     }
 
@@ -34,6 +42,13 @@ final class AppFlowCoordinator: FlowCoordinator {
 extension AppFlowCoordinator: WelcomeViewControllerDelegate {
 
     func didTapNext(with cousine: String) {
-        /// TODO: Show Meals screen.
+        runMealViewController(with: cousine)
+    }
+}
+
+extension AppFlowCoordinator: MealCollectionViewControllerDelegate {
+
+    func didSelectCell() {
+        /// TODO: Run Details screen
     }
 }
