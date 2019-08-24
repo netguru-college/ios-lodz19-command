@@ -17,6 +17,7 @@
 		696FE49F217635D2005C9FDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 696FE49E217635D2005C9FDD /* Assets.xcassets */; };
 		696FE4A2217635D2005C9FDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 696FE4A0217635D2005C9FDD /* LaunchScreen.storyboard */; };
 		696FE4AD217635D2005C9FDD /* NetguruCollegeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FE4AC217635D2005C9FDD /* NetguruCollegeAppTests.swift */; };
+		D33AEFE723116F7E00F2A3A0 /* RandomMealRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33AEFE623116F7E00F2A3A0 /* RandomMealRequest.swift */; };
 		D340A21F231154DE002FC4AE /* CuisineGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D340A21E231154DE002FC4AE /* CuisineGenerator.swift */; };
 		E8079EE2231146B6002E8B5E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8079EE1231146B6002E8B5E /* DetailViewController.swift */; };
 		E8079EE4231146BC002E8B5E /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8079EE3231146BC002E8B5E /* DetailViewModel.swift */; };
@@ -64,6 +65,7 @@
 		696FE4AE217635D2005C9FDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70B9FAC81C5FF8A335FA5053 /* Pods-NetguruCollegeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetguruCollegeApp.debug.xcconfig"; path = "Target Support Files/Pods-NetguruCollegeApp/Pods-NetguruCollegeApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B70CCCFD923A49BB70EE7D09 /* Pods-NetguruCollegeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetguruCollegeApp.release.xcconfig"; path = "Target Support Files/Pods-NetguruCollegeApp/Pods-NetguruCollegeApp.release.xcconfig"; sourceTree = "<group>"; };
+		D33AEFE623116F7E00F2A3A0 /* RandomMealRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomMealRequest.swift; sourceTree = "<group>"; };
 		D340A21E231154DE002FC4AE /* CuisineGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuisineGenerator.swift; sourceTree = "<group>"; };
 		E8079EE1231146B6002E8B5E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		E8079EE3231146BC002E8B5E /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				E814F7E02310713600788FA9 /* APIError.swift */,
 				E814F7DE2310713600788FA9 /* APIMethod.swift */,
 				E814F7E12310713600788FA9 /* APIRequest.swift */,
+				D33AEFE523116DE100F2A3A0 /* Request */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -238,6 +241,14 @@
 				E842F05A23116D000024BC88 /* AppFlowCoordinator.swift */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		D33AEFE523116DE100F2A3A0 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				D33AEFE623116F7E00F2A3A0 /* RandomMealRequest.swift */,
+			);
+			path = Request;
 			sourceTree = "<group>";
 		};
 		D78ED9CC3C02DDC356B00910 /* Frameworks */ = {
@@ -460,6 +471,7 @@
 				04612AC5231169F300ABA33A /* MealCollectionViewController.swift in Sources */,
 				E814F7E52310713600788FA9 /* APIRequest.swift in Sources */,
 				E814F7E32310713600788FA9 /* APIClient.swift in Sources */,
+				D33AEFE723116F7E00F2A3A0 /* RandomMealRequest.swift in Sources */,
 				E8079EED23114A16002E8B5E /* Meal.swift in Sources */,
 				E8079EE4231146BC002E8B5E /* DetailViewModel.swift in Sources */,
 				E814F7E82310714300788FA9 /* WelcomeViewController.swift in Sources */,
