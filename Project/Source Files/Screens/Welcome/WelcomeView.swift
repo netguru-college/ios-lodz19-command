@@ -9,6 +9,7 @@ final class WelcomeView: UIView {
 
     @IBOutlet var randomButton: UIButton!
     @IBOutlet var cusineLabel: UILabel!
+    @IBOutlet var nextScreenButton: UIButton!
 
     class func instanceFromNib() -> UIView {
         let view = UINib(

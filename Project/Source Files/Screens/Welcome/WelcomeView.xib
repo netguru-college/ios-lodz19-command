@@ -73,6 +73,7 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="cusineLabel" destination="RwK-xw-6BB" id="Dbs-AI-A9t"/>
+                <outlet property="nextScreenButton" destination="LoK-jN-dpH" id="jwI-81-d6B"/>
                 <outlet property="randomButton" destination="JTO-Ci-CCw" id="qIe-RO-m0P"/>
             </connections>
             <point key="canvasLocation" x="173.59999999999999" y="111.99400299850076"/>
