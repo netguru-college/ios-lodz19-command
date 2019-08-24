@@ -17,10 +17,19 @@ final class AppFlowCoordinator: FlowCoordinator {
         rootViewController = UINavigationController()
         window.rootViewController = rootViewController
         window.makeKeyAndVisible()
+        runWelcomeScreen()
+    }
+
+    private func runWelcomeScreen() {
+        let viewController = WelcomeViewController(delegate: self)
+        rootViewController.show(viewController, sender: nil)
     }
 
     private func runMealViewController(with cousine: String) {
-        let viewController = MealCollectionViewController(mealViewModel: MealViewModel(cousine: cousine), delegate: self)
+        let viewController = MealCollectionViewController(
+            mealViewModel: MealViewModel(cousine: cousine),
+            delegate: self
+        )
         rootViewController.show(viewController, sender: nil)
     }
 
@@ -30,18 +39,16 @@ final class AppFlowCoordinator: FlowCoordinator {
     }
 }
 
-extension AppFlowCoordinator: HelloWorldViewControllerDelegate {
+extension AppFlowCoordinator: WelcomeViewControllerDelegate {
 
-    func didSelectNextButton() {
-        let nextViewController = WelcomeViewController()
-        rootViewController.show(nextViewController, sender: nil)
+    func didTapNext(with cousine: String) {
+        runMealViewController(with: cousine)
     }
 }
 
 extension AppFlowCoordinator: MealCollectionViewControllerDelegate {
 
     func didSelectCell() {
-        //runDetailsScreen(with: Meal())
-        print(self)
+        /// TODO: Run Details screen
     }
 }

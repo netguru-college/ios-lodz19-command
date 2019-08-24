@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -12,24 +12,74 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="WelcomeView" customModule="NetguruCollegeApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Netguru Collage!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eum-40-Rir">
-                    <rect key="frame" x="40" y="413.5" width="334" height="79"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                    <color key="textColor" red="0.98823529409999999" green="0.96862745100000003" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1u6-ow-iap">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="zJn-gL-myA">
+                            <rect key="frame" x="72.5" y="185" width="230" height="297"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="IHy-fp-deE">
+                                    <rect key="frame" x="0.0" y="0.0" width="230" height="266"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JTO-Ci-CCw">
+                                            <rect key="frame" x="0.0" y="0.0" width="230" height="215"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="230" id="g2n-tv-sSn"/>
+                                                <constraint firstAttribute="height" constant="215" id="xHa-lk-2e8"/>
+                                            </constraints>
+                                            <state key="normal" title="chooseRandomCussine " image="asset"/>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RwK-xw-6BB">
+                                            <rect key="frame" x="0.0" y="257" width="230" height="9"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="230" id="rrZ-jL-pXL"/>
+                                    </constraints>
+                                </stackView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LoK-jN-dpH">
+                                    <rect key="frame" x="0.0" y="297" width="230" height="0.0"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" id="XRC-Rd-dUX"/>
+                                    </constraints>
+                                    <state key="normal" title="NEXT">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.90980392156862744" green="0.25490196078431371" blue="0.094117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="zJn-gL-myA" firstAttribute="centerY" secondItem="1u6-ow-iap" secondAttribute="centerY" id="qFA-Kr-fmz"/>
+                        <constraint firstItem="zJn-gL-myA" firstAttribute="centerX" secondItem="1u6-ow-iap" secondAttribute="centerX" id="sCk-jV-DeX"/>
+                    </constraints>
+                </view>
             </subviews>
-            <color key="backgroundColor" red="0.30196078430000001" green="0.8182538707" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="eum-40-Rir" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="8Er-Oz-1Yh"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="eum-40-Rir" secondAttribute="trailing" constant="40" id="ETc-IQ-paO"/>
-                <constraint firstItem="eum-40-Rir" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="H16-KR-VkS"/>
+                <constraint firstItem="1u6-ow-iap" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="6I0-lg-x5V"/>
+                <constraint firstItem="1u6-ow-iap" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Geg-gY-L9j"/>
+                <constraint firstAttribute="bottom" secondItem="1u6-ow-iap" secondAttribute="bottom" id="MsD-1K-oF2"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="top" secondItem="zJn-gL-myA" secondAttribute="top" constant="-165" id="OAE-pr-lVd"/>
+                <constraint firstItem="1u6-ow-iap" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="PcO-o1-mDU"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="cusineLabel" destination="RwK-xw-6BB" id="Dbs-AI-A9t"/>
+                <outlet property="nextScreenButton" destination="LoK-jN-dpH" id="jwI-81-d6B"/>
+                <outlet property="randomButton" destination="JTO-Ci-CCw" id="qIe-RO-m0P"/>
+            </connections>
+            <point key="canvasLocation" x="173.59999999999999" y="111.99400299850076"/>
         </view>
     </objects>
+    <resources>
+        <image name="asset" width="512" height="512"/>
+    </resources>
 </document>

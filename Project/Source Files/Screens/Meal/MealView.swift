@@ -3,12 +3,10 @@
 //  NetguruCollegeApp
 //
 
-
 import UIKit
 
+final class MealView: UIView {
 
-class MealView: UIView {
-    
     init() {
         super.init(frame: .zero)
         addSubview(collectionView)
@@ -16,14 +14,14 @@ class MealView: UIView {
             collectionView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             collectionView.leftAnchor.constraint(equalTo: leftAnchor),
             collectionView.rightAnchor.constraint(equalTo: rightAnchor),
-            collectionView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
         ])
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: 70, height: 70)

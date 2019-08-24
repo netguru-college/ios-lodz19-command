@@ -3,8 +3,6 @@
 //  NetguruCollegeApp
 //
 
-import Foundation
-
 struct CuisineGenerator {
 
     private let cuisineList: [String] = [

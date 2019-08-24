@@ -9,8 +9,8 @@ protocol MealCollectionViewControllerDelegate: AnyObject {
     func didSelectCell()
 }
 
-class MealCollectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
-    
+final class MealCollectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+
     private let viewModel: MealViewModel
 
     private weak var delegate: MealCollectionViewControllerDelegate?
@@ -64,10 +64,12 @@ extension MealCollectionViewController: UICollectionViewDelegateFlowLayout {
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top:  customView.collectionView.bounds.width * 0.02,
-                            left:  customView.collectionView.bounds.width * 0.02,
-                            bottom:  customView.collectionView.bounds.width * 0.02,
-                            right: customView.collectionView.bounds.width * 0.02)
+        return .init(
+            top: customView.collectionView.bounds.width * 0.02,
+            left: customView.collectionView.bounds.width * 0.02,
+            bottom: customView.collectionView.bounds.width * 0.02,
+            right: customView.collectionView.bounds.width * 0.02
+        )
     }
 
 }
