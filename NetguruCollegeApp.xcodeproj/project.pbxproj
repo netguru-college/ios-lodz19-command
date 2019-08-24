@@ -13,6 +13,7 @@
 		696FE49F217635D2005C9FDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 696FE49E217635D2005C9FDD /* Assets.xcassets */; };
 		696FE4A2217635D2005C9FDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 696FE4A0217635D2005C9FDD /* LaunchScreen.storyboard */; };
 		696FE4AD217635D2005C9FDD /* NetguruCollegeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FE4AC217635D2005C9FDD /* NetguruCollegeAppTests.swift */; };
+		D340A21F231154DE002FC4AE /* CuisineGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D340A21E231154DE002FC4AE /* CuisineGenerator.swift */; };
 		E8079EE2231146B6002E8B5E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8079EE1231146B6002E8B5E /* DetailViewController.swift */; };
 		E8079EE4231146BC002E8B5E /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8079EE3231146BC002E8B5E /* DetailViewModel.swift */; };
 		E8079EE8231146DD002E8B5E /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8079EE7231146DD002E8B5E /* DetailView.swift */; };
@@ -55,6 +56,7 @@
 		696FE4AE217635D2005C9FDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70B9FAC81C5FF8A335FA5053 /* Pods-NetguruCollegeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetguruCollegeApp.debug.xcconfig"; path = "Target Support Files/Pods-NetguruCollegeApp/Pods-NetguruCollegeApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B70CCCFD923A49BB70EE7D09 /* Pods-NetguruCollegeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetguruCollegeApp.release.xcconfig"; path = "Target Support Files/Pods-NetguruCollegeApp/Pods-NetguruCollegeApp.release.xcconfig"; sourceTree = "<group>"; };
+		D340A21E231154DE002FC4AE /* CuisineGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuisineGenerator.swift; sourceTree = "<group>"; };
 		E8079EE1231146B6002E8B5E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		E8079EE3231146BC002E8B5E /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		E8079EE7231146DD002E8B5E /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				4EF6846021E6438300DA50FC /* Networking */,
+				D340A21E231154DE002FC4AE /* CuisineGenerator.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -429,6 +432,7 @@
 				E814F7E42310713600788FA9 /* APIError.swift in Sources */,
 				E814F7E92310714300788FA9 /* HelloWorldViewController.swift in Sources */,
 				E814F7F12310716D00788FA9 /* WelcomeView.swift in Sources */,
+				D340A21F231154DE002FC4AE /* CuisineGenerator.swift in Sources */,
 				E814F7E52310713600788FA9 /* APIRequest.swift in Sources */,
 				E814F7E32310713600788FA9 /* APIClient.swift in Sources */,
 				E8079EED23114A16002E8B5E /* Meal.swift in Sources */,
