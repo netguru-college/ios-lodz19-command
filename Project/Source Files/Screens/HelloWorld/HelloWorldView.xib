@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14810.11" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.13"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -30,12 +28,19 @@
                     </constraints>
                     <state key="normal" title="Let's go!"/>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XBR-Es-CEj">
+                    <rect key="frame" x="137" y="688" width="140" height="30"/>
+                    <state key="normal" title="Show Detail VIew"/>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="XBR-Es-CEj" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="9eh-Ni-Wav"/>
                 <constraint firstItem="sZy-ok-DVd" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="FuB-ea-IVj"/>
                 <constraint firstItem="n0p-ZG-ZSC" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="HWp-4e-fEc"/>
                 <constraint firstItem="sZy-ok-DVd" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="R7S-vO-i5P"/>
+                <constraint firstItem="XBR-Es-CEj" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="644" id="deE-U3-38A"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="XBR-Es-CEj" secondAttribute="bottom" constant="144" id="i2n-9f-ekC"/>
                 <constraint firstItem="n0p-ZG-ZSC" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="kjs-13-p0h"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

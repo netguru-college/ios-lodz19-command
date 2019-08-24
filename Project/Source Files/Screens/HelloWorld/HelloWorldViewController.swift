@@ -7,6 +7,7 @@ import UIKit
 
 protocol HelloWorldViewControllerDelegate: AnyObject {
     func didSelectNextButton()
+    func didSelectDetailViewButton()
 }
 
 class HelloWorldViewController: UIViewController {

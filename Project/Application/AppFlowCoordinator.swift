@@ -32,4 +32,9 @@ extension AppFlowCoordinator: HelloWorldViewControllerDelegate {
         let nextViewController = WelcomeViewController()
         rootViewController.show(nextViewController, sender: nil)
     }
+    
+    func didSelectDetailViewButton() {
+        let nextViewController = DetailViewController(viewModel: DetailViewModel(meal: Meal()))
+        rootViewController.show(nextViewController, sender: nil)
+    }
 }
