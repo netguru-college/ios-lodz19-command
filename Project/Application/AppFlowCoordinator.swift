@@ -35,8 +35,8 @@ extension AppFlowCoordinator: HelloWorldViewControllerDelegate {
 
     func didSelectDetailViewButton() {
         let mockMealJson = Meal(id: 633508,
-                                image: "Baked-Cheese-Manicotti-633508.jpg",
-                                imageUrls: ["Baked-Cheese-Manicotti-633508.jpg"],
+                                image: "image2.jpg",
+                                imageUrls: ["image2.jpg"],
                                 readyInMinutes: 45,
                                 serving: 6,
                                 title: "Baked Cheese Manicotti"
