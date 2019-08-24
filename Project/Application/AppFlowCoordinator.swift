@@ -14,10 +14,15 @@ final class AppFlowCoordinator: FlowCoordinator {
     }
 
     func initializeApp() {
-        let viewController = HelloWorldViewController(delegate: self)
+        let viewController = MealCollectionViewController(delegate: self)
         rootViewController = UINavigationController(rootViewController: viewController)
         window.rootViewController = rootViewController
         window.makeKeyAndVisible()
+    }
+
+    private func runMealViewController() {
+        let viewController = MealCollectionViewController(delegate: self)
+        rootViewController.show(viewController, sender: nil)
     }
 
     private func runDetailsScreen(with meal: Meal) {
@@ -31,5 +36,12 @@ extension AppFlowCoordinator: HelloWorldViewControllerDelegate {
     func didSelectNextButton() {
         let nextViewController = WelcomeViewController()
         rootViewController.show(nextViewController, sender: nil)
+    }
+}
+
+extension AppFlowCoordinator: MealCollectionViewControllerDelegate {
+
+    func didSelectCell() {
+        print(self)
     }
 }
