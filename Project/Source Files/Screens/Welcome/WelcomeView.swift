@@ -7,7 +7,19 @@ import UIKit
 
 final class WelcomeView: UIView {
 
+    @IBOutlet var randomButton: UIButton!
+    @IBOutlet var cusineLabel: UILabel!
+
     class func instanceFromNib() -> UIView {
-        return UINib(nibName: "WelcomeView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! UIView
+        let view = UINib(
+            nibName: "WelcomeView",
+            bundle: nil
+        ).instantiate(withOwner: nil, options: nil)[0] as! WelcomeView
+        view.setupLayout()
+        return view
+    }
+
+    func setupLayout() {
+        randomButton.layer.cornerRadius = randomButton.frame.height / 2
     }
 }

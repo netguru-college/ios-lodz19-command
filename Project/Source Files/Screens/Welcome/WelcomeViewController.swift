@@ -15,6 +15,7 @@ final class WelcomeViewController: UIViewController {
 
     init() {
         super.init(nibName: nil, bundle: nil)
+        setupCallBacks()
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -23,5 +24,14 @@ final class WelcomeViewController: UIViewController {
 
     override func loadView() {
         view = WelcomeView.instanceFromNib()
+    }
+
+    private func setupCallBacks () {
+        customView.randomButton.addTarget(self, action: #selector(didTapRandomButton), for: .touchUpInside)
+    }
+
+    @objc private func didTapRandomButton() {
+        let newGenerator = CuisineGenerator()
+        customView.cusineLabel.text = newGenerator.getRandom()
     }
 }
