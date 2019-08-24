@@ -36,9 +36,13 @@ class HelloWorldViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         customView.nextButton.addTarget(self, action: #selector(nextAction), for: .touchUpInside)
+        customView.showDetailViewButton.addTarget(self, action: #selector(showDetailViewAction), for: .touchUpInside)
     }
 
     @objc func nextAction() {
         delegate?.didSelectNextButton()
+    }
+    @objc func showDetailViewAction() {
+        delegate?.didSelectDetailViewButton()
     }
 }

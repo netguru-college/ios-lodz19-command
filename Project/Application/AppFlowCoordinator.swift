@@ -32,9 +32,16 @@ extension AppFlowCoordinator: HelloWorldViewControllerDelegate {
         let nextViewController = WelcomeViewController()
         rootViewController.show(nextViewController, sender: nil)
     }
-    
+
     func didSelectDetailViewButton() {
-        let nextViewController = DetailViewController(viewModel: DetailViewModel(meal: Meal()))
+        let mockMealJson = Meal(id: 633508,
+                                image: "Baked-Cheese-Manicotti-633508.jpg",
+                                imageUrls: ["Baked-Cheese-Manicotti-633508.jpg"],
+                                readyInMinutes: 45,
+                                serving: 6,
+                                title: "Baked Cheese Manicotti"
+                               )
+        let nextViewController = DetailViewController(viewModel: DefaultDetailViewModel(meal: mockMealJson))
         rootViewController.show(nextViewController, sender: nil)
     }
 }

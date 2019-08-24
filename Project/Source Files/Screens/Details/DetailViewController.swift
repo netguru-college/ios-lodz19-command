@@ -23,6 +23,6 @@ final class DetailViewController: UIViewController {
     }
 
     override func loadView() {
-        view = WelcomeView.instanceFromNib()
+        view = DetailView.instanceFromNib()
     }
 }
