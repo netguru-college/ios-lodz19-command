@@ -35,6 +35,9 @@ class CuisineGenerator {
         "Thai",
         "Vietnamese"]
 
+    /// Get random cuisine name.
+    ///
+    /// - Returns: Name of random cuisine.
     func getRandom() -> String? {
         return cuisineList.randomElement()
     }
