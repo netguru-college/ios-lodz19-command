@@ -3,11 +3,9 @@
 //  NetguruCollegeApp
 //
 
-import Foundation
-
 struct RandomMealRequest: APIRequest {
 
-    var path: String = "recipes/search"
+    var path: String = "/recipes/search"
 
     var method: APIMethod = .get
 

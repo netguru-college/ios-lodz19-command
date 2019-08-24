@@ -7,7 +7,7 @@ import Foundation
 
 final class APIClient {
 
-    let baseURL = "https://api.spoonacular.com/"
+    let baseURL = "https://api.spoonacular.com"
     let sessionConfiguration = URLSessionConfiguration.default
     lazy var session = URLSession(configuration: sessionConfiguration)
 
