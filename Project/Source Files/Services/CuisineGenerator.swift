@@ -5,7 +5,7 @@
 
 import Foundation
 
-class CuisineGenerator {
+struct CuisineGenerator {
 
     private let cuisineList: [String] = [
         "African",
