@@ -1,11 +1,11 @@
 //
-//  ApiClient.swift
+//  APIClient.swift
 //  NetguruCollegeApp
 //
 
 import Foundation
 
-final class ApiClient {
+final class APIClient {
 
     let baseURL = "https://cat-fact.herokuapp.com"
     let sessionConfiguration = URLSessionConfiguration.default
@@ -60,7 +60,7 @@ final class ApiClient {
             request: request,
             success: { data in
                 guard let data = data else {
-                    failure(ApiError("Data was nil!"))
+                    failure(APIError("Data was nil!"))
                     return
                 }
 

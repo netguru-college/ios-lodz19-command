@@ -5,7 +5,7 @@
 
 import Foundation
 
-struct ApiError: LocalizedError {
+struct APIError: LocalizedError {
 
     private let description: String
 

@@ -9,10 +9,6 @@ protocol HelloWorldViewControllerDelegate: AnyObject {
     func didSelectNextButton()
 }
 
-struct Response: Decodable {
-
-}
-
 class HelloWorldViewController: UIViewController {
 
     private var customView: HelloWorldView {
