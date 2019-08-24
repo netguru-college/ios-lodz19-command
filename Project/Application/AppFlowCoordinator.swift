@@ -19,6 +19,11 @@ final class AppFlowCoordinator: FlowCoordinator {
         window.rootViewController = rootViewController
         window.makeKeyAndVisible()
     }
+
+    private func runDetailsScreen(with meal: Meal) {
+        let viewController = DetailViewController(viewModel: DefaultDetailViewModel(meal: meal))
+        rootViewController.show(viewController, sender: nil)
+    }
 }
 
 extension AppFlowCoordinator: HelloWorldViewControllerDelegate {
