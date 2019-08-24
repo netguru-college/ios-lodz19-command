@@ -11,7 +11,6 @@
 		04612AC6231169F300ABA33A /* MealCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04612AC2231169F300ABA33A /* MealCollectionViewCell.swift */; };
 		04612AC7231169F300ABA33A /* MealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04612AC3231169F300ABA33A /* MealView.swift */; };
 		04612AC8231169F300ABA33A /* MealViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04612AC4231169F300ABA33A /* MealViewModel.swift */; };
-		04612ACA23116A1300ABA33A /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04612AC923116A1300ABA33A /* AppFlowCoordinator.swift */; };
 		2E5CB7214B4A78251C20EA48 /* Pods_NetguruCollegeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5917DB1E95701B4EE6BDDCAF /* Pods_NetguruCollegeApp.framework */; };
 		696FE498217635CB005C9FDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FE497217635CB005C9FDD /* AppDelegate.swift */; };
 		696FE49D217635CB005C9FDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 696FE49B217635CB005C9FDD /* Main.storyboard */; };
@@ -35,6 +34,7 @@
 		E814F7EF2310716700788FA9 /* HelloWorldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E814F7EE2310716700788FA9 /* HelloWorldView.xib */; };
 		E814F7F12310716D00788FA9 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E814F7F02310716D00788FA9 /* WelcomeView.swift */; };
 		E814F7F32310717400788FA9 /* WelcomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E814F7F22310717400788FA9 /* WelcomeView.xib */; };
+		E842F05B23116D010024BC88 /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E842F05A23116D000024BC88 /* AppFlowCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +52,6 @@
 		04612AC2231169F300ABA33A /* MealCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealCollectionViewCell.swift; sourceTree = "<group>"; };
 		04612AC3231169F300ABA33A /* MealView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealView.swift; sourceTree = "<group>"; };
 		04612AC4231169F300ABA33A /* MealViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealViewModel.swift; sourceTree = "<group>"; };
-		04612AC923116A1300ABA33A /* AppFlowCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppFlowCoordinator.swift; path = "../../../../Command/nc-ios/Project/Application/AppFlowCoordinator.swift"; sourceTree = "<group>"; };
 		5917DB1E95701B4EE6BDDCAF /* Pods_NetguruCollegeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetguruCollegeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		696FE494217635CB005C9FDD /* NetguruCollegeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetguruCollegeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		696FE497217635CB005C9FDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +81,7 @@
 		E814F7EE2310716700788FA9 /* HelloWorldView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HelloWorldView.xib; sourceTree = "<group>"; };
 		E814F7F02310716D00788FA9 /* WelcomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		E814F7F22310717400788FA9 /* WelcomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeView.xib; sourceTree = "<group>"; };
+		E842F05A23116D000024BC88 /* AppFlowCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppFlowCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,7 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				696FE497217635CB005C9FDD /* AppDelegate.swift */,
-				04612AC923116A1300ABA33A /* AppFlowCoordinator.swift */,
+				E842F05A23116D000024BC88 /* AppFlowCoordinator.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -454,9 +454,9 @@
 				04612AC6231169F300ABA33A /* MealCollectionViewCell.swift in Sources */,
 				E814F7E42310713600788FA9 /* APIError.swift in Sources */,
 				E814F7E92310714300788FA9 /* HelloWorldViewController.swift in Sources */,
-				04612ACA23116A1300ABA33A /* AppFlowCoordinator.swift in Sources */,
 				E814F7F12310716D00788FA9 /* WelcomeView.swift in Sources */,
 				D340A21F231154DE002FC4AE /* CuisineGenerator.swift in Sources */,
+				E842F05B23116D010024BC88 /* AppFlowCoordinator.swift in Sources */,
 				04612AC5231169F300ABA33A /* MealCollectionViewController.swift in Sources */,
 				E814F7E52310713600788FA9 /* APIRequest.swift in Sources */,
 				E814F7E32310713600788FA9 /* APIClient.swift in Sources */,
