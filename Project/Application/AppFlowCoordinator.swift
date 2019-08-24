@@ -17,7 +17,6 @@ final class AppFlowCoordinator: FlowCoordinator {
         rootViewController = UINavigationController()
         window.rootViewController = rootViewController
         window.makeKeyAndVisible()
-        runMealViewController(with: "Italian")
     }
 
     private func runMealViewController(with cousine: String) {
