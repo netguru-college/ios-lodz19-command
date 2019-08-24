@@ -14,10 +14,15 @@ final class AppFlowCoordinator: FlowCoordinator {
     }
 
     func initializeApp() {
-        let viewController = HelloWorldViewController(delegate: self)
-        rootViewController = UINavigationController(rootViewController: viewController)
+        rootViewController = UINavigationController()
         window.rootViewController = rootViewController
         window.makeKeyAndVisible()
+        runWelcomeScreen()
+    }
+
+    private func runWelcomeScreen() {
+        let viewController = WelcomeViewController()
+        rootViewController.show(viewController, sender: nil)
     }
 
     private func runDetailsScreen(with meal: Meal) {
@@ -26,10 +31,9 @@ final class AppFlowCoordinator: FlowCoordinator {
     }
 }
 
-extension AppFlowCoordinator: HelloWorldViewControllerDelegate {
+extension AppFlowCoordinator: WelcomeViewControllerDelegate {
 
-    func didSelectNextButton() {
-        let nextViewController = WelcomeViewController()
-        rootViewController.show(nextViewController, sender: nil)
+    func didTapNext(with cousine: String) {
+        /// TODO: Show Meals screen.
     }
 }

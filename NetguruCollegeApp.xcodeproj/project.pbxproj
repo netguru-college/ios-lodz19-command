@@ -26,9 +26,6 @@
 		E814F7E42310713600788FA9 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E814F7E02310713600788FA9 /* APIError.swift */; };
 		E814F7E52310713600788FA9 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E814F7E12310713600788FA9 /* APIRequest.swift */; };
 		E814F7E82310714300788FA9 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E814F7E62310714300788FA9 /* WelcomeViewController.swift */; };
-		E814F7E92310714300788FA9 /* HelloWorldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E814F7E72310714300788FA9 /* HelloWorldViewController.swift */; };
-		E814F7ED2310716000788FA9 /* HelloWorldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E814F7EC2310716000788FA9 /* HelloWorldView.swift */; };
-		E814F7EF2310716700788FA9 /* HelloWorldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E814F7EE2310716700788FA9 /* HelloWorldView.xib */; };
 		E814F7F12310716D00788FA9 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E814F7F02310716D00788FA9 /* WelcomeView.swift */; };
 		E814F7F32310717400788FA9 /* WelcomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E814F7F22310717400788FA9 /* WelcomeView.xib */; };
 		E814F7F52310719E00788FA9 /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E814F7F42310719D00788FA9 /* AppFlowCoordinator.swift */; };
@@ -70,9 +67,6 @@
 		E814F7E02310713600788FA9 /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		E814F7E12310713600788FA9 /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		E814F7E62310714300788FA9 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		E814F7E72310714300788FA9 /* HelloWorldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelloWorldViewController.swift; sourceTree = "<group>"; };
-		E814F7EC2310716000788FA9 /* HelloWorldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelloWorldView.swift; sourceTree = "<group>"; };
-		E814F7EE2310716700788FA9 /* HelloWorldView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HelloWorldView.xib; sourceTree = "<group>"; };
 		E814F7F02310716D00788FA9 /* WelcomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		E814F7F22310717400788FA9 /* WelcomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeView.xib; sourceTree = "<group>"; };
 		E814F7F42310719D00788FA9 /* AppFlowCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppFlowCoordinator.swift; sourceTree = "<group>"; };
@@ -101,7 +95,6 @@
 			isa = PBXGroup;
 			children = (
 				4EF6846021E6438300DA50FC /* Networking */,
-				D340A21E231154DE002FC4AE /* CuisineGenerator.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -184,7 +177,6 @@
 			children = (
 				E8079EE0231146A8002E8B5E /* Details */,
 				E814F7EB2310714E00788FA9 /* Welcome */,
-				E814F7EA2310714500788FA9 /* HelloWorld */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -266,22 +258,13 @@
 			path = "Base classes";
 			sourceTree = "<group>";
 		};
-		E814F7EA2310714500788FA9 /* HelloWorld */ = {
-			isa = PBXGroup;
-			children = (
-				E814F7E72310714300788FA9 /* HelloWorldViewController.swift */,
-				E814F7EC2310716000788FA9 /* HelloWorldView.swift */,
-				E814F7EE2310716700788FA9 /* HelloWorldView.xib */,
-			);
-			path = HelloWorld;
-			sourceTree = "<group>";
-		};
 		E814F7EB2310714E00788FA9 /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
 				E814F7E62310714300788FA9 /* WelcomeViewController.swift */,
 				E814F7F02310716D00788FA9 /* WelcomeView.swift */,
 				E814F7F22310717400788FA9 /* WelcomeView.xib */,
+				D340A21E231154DE002FC4AE /* CuisineGenerator.swift */,
 			);
 			path = Welcome;
 			sourceTree = "<group>";
@@ -373,7 +356,6 @@
 				E814F7F32310717400788FA9 /* WelcomeView.xib in Resources */,
 				696FE49F217635D2005C9FDD /* Assets.xcassets in Resources */,
 				E8079EEA231147DB002E8B5E /* DetailView.xib in Resources */,
-				E814F7EF2310716700788FA9 /* HelloWorldView.xib in Resources */,
 				696FE49D217635CB005C9FDD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -441,7 +423,6 @@
 				E8079EE8231146DD002E8B5E /* DetailView.swift in Sources */,
 				E8079EE2231146B6002E8B5E /* DetailViewController.swift in Sources */,
 				E814F7E42310713600788FA9 /* APIError.swift in Sources */,
-				E814F7E92310714300788FA9 /* HelloWorldViewController.swift in Sources */,
 				E814F7F12310716D00788FA9 /* WelcomeView.swift in Sources */,
 				D340A21F231154DE002FC4AE /* CuisineGenerator.swift in Sources */,
 				E814F7E52310713600788FA9 /* APIRequest.swift in Sources */,
@@ -451,7 +432,6 @@
 				E8079EE4231146BC002E8B5E /* DetailViewModel.swift in Sources */,
 				E814F7E82310714300788FA9 /* WelcomeViewController.swift in Sources */,
 				E814F7F52310719E00788FA9 /* AppFlowCoordinator.swift in Sources */,
-				E814F7ED2310716000788FA9 /* HelloWorldView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
