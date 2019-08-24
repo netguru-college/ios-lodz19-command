@@ -54,9 +54,27 @@ class MealCollectionViewController: UIViewController, UICollectionViewDataSource
     }
 }
 
+extension MealCollectionViewController: UICollectionViewDelegateFlowLayout {
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let yourWidth = customView.collectionView.bounds.width * 0.3
+        let yourHeight = yourWidth
+
+        return CGSize(width: yourWidth, height: yourHeight)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top:  customView.collectionView.bounds.width * 0.02,
+                            left:  customView.collectionView.bounds.width * 0.02,
+                            bottom:  customView.collectionView.bounds.width * 0.02,
+                            right: customView.collectionView.bounds.width * 0.02)
+    }
+
+}
+
 extension MealCollectionViewController {
 
-     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         delegate?.didSelectCell()
     }
 }

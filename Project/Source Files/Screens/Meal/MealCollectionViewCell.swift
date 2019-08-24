@@ -12,6 +12,8 @@ final class MealCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .white
+        layer.cornerRadius = 10
+        layer.masksToBounds = true
         addSubview(mealImageView)
         NSLayoutConstraint.activate([
             mealImageView.topAnchor.constraint(equalTo: topAnchor),
@@ -27,7 +29,7 @@ final class MealCollectionViewCell: UICollectionViewCell {
 
     let mealImageView: UIImageView = {
         let mealImageView = UIImageView()
-        mealImageView.contentMode = .scaleAspectFit
+        mealImageView.contentMode = .scaleToFill
         mealImageView.translatesAutoresizingMaskIntoConstraints = false
         return mealImageView
     }()

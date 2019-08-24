@@ -7,7 +7,7 @@ import UIKit
 
 class MealViewModel {
     
-    var mealPhotos: [UIImage] = [#imageLiteral(resourceName: "testFood")]
+    var mealPhotos: [UIImage] = [#imageLiteral(resourceName: "testFood"),#imageLiteral(resourceName: "testFood"),#imageLiteral(resourceName: "testFood"),#imageLiteral(resourceName: "testFood"),#imageLiteral(resourceName: "testFood")]
     
     private let cousine: String
     

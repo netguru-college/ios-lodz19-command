@@ -14,7 +14,6 @@ final class AppFlowCoordinator: FlowCoordinator {
     }
 
     func initializeApp() {
-//        let viewController = MealCollectionViewController(delegate: self)
         rootViewController = UINavigationController()
         window.rootViewController = rootViewController
         window.makeKeyAndVisible()
@@ -43,6 +42,7 @@ extension AppFlowCoordinator: HelloWorldViewControllerDelegate {
 extension AppFlowCoordinator: MealCollectionViewControllerDelegate {
 
     func didSelectCell() {
+        //runDetailsScreen(with: Meal())
         print(self)
     }
 }
