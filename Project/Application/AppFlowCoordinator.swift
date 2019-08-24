@@ -14,14 +14,15 @@ final class AppFlowCoordinator: FlowCoordinator {
     }
 
     func initializeApp() {
-        let viewController = MealCollectionViewController(delegate: self)
-        rootViewController = UINavigationController(rootViewController: viewController)
+//        let viewController = MealCollectionViewController(delegate: self)
+        rootViewController = UINavigationController()
         window.rootViewController = rootViewController
         window.makeKeyAndVisible()
+        runMealViewController(with: "Italian")
     }
 
-    private func runMealViewController() {
-        let viewController = MealCollectionViewController(delegate: self)
+    private func runMealViewController(with cousine: String) {
+        let viewController = MealCollectionViewController(mealViewModel: MealViewModel(cousine: cousine), delegate: self)
         rootViewController.show(viewController, sender: nil)
     }
 

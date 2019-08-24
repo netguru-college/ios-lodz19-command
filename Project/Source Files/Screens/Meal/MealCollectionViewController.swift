@@ -10,15 +10,18 @@ protocol MealCollectionViewControllerDelegate: AnyObject {
 }
 
 class MealCollectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
-    var mealImages = [UIImage]()
+    
+    private let viewModel: MealViewModel
+
     private weak var delegate: MealCollectionViewControllerDelegate?
 
     private var customView: MealView {
         return view as! MealView
     }
 
-    init(delegate: MealCollectionViewControllerDelegate?) {
+    init(mealViewModel: MealViewModel, delegate: MealCollectionViewControllerDelegate?) {
         self.delegate = delegate
+        self.viewModel = mealViewModel
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -32,23 +35,21 @@ class MealCollectionViewController: UIViewController, UICollectionViewDataSource
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        mealImages.append(#imageLiteral(resourceName: "testFood"))
-        self.title = "MealViewController"
+        title = "MealViewController"
         customView.collectionView.register(MealCollectionViewCell.self, forCellWithReuseIdentifier: MealCollectionViewCell.name)
         customView.collectionView.dataSource = self
         customView.collectionView.delegate = self
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return mealImages.count
+        return viewModel.mealPhotos.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MealCollectionViewCell.name, for: indexPath) as? MealCollectionViewCell else {
             fatalError("MealCollectionViewCell was not found")
         }
-        cell.mealImageView.image = mealImages[indexPath.row]
+        cell.mealImageView.image = viewModel.mealPhotos[indexPath.row]
         return cell
     }
 }
