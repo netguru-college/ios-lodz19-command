@@ -20,4 +20,8 @@ struct RandomMealRequest: APIRequest {
 
     let number: Int
 
+    init(cuisine: String, number: Int) {
+        self.cuisine = cuisine
+        self.number = number
+    }
 }
