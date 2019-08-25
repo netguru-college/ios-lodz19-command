@@ -6,6 +6,7 @@
 import UIKit
 
 final class DetailView: UIView {
+
     // MARK: properties
     private let titleLabel: UILabel = {
         let label = UILabel()
@@ -20,6 +21,7 @@ final class DetailView: UIView {
         imageView.clipsToBounds = true
         imageView.contentMode = .scaleAspectFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.layer.cornerRadius = 4
         return imageView
     }()
 
@@ -37,7 +39,7 @@ final class DetailView: UIView {
         return row
     }()
     private let readyInMinutesRow: DetailInformationView = {
-        let row = DetailInformationView(titleString: "Ready in minutes: ")
+        let row = DetailInformationView(titleString: "Ready in")
         row.translatesAutoresizingMaskIntoConstraints = false
         return row
     }()
@@ -47,7 +49,7 @@ final class DetailView: UIView {
         super.init(frame: .zero)
         addSubviews()
         setupConstraints()
-        backgroundColor = .white
+        backgroundColor = #colorLiteral(red: 0.9369841218, green: 0.3454609811, blue: 0.1157674268, alpha: 1)
     }
 
     required init?(coder: NSCoder) {
@@ -57,17 +59,13 @@ final class DetailView: UIView {
     func feedWith(_ meal: Meal) {
         let mealImage = UIImage(named: meal.image)
         imageView.image = mealImage
-
         servingTimeRow.feedWithValueString(valueString: "\(meal.servings)")
-        readyInMinutesRow.feedWithValueString(valueString: "\(meal.readyInMinutes)")
-
+        readyInMinutesRow.feedWithValueString(valueString: " \(meal.readyInMinutes) minutes.")
         titleLabel.text = meal.title
     }
 
     private func addSubviews() {
-        addSubview(imageView)
-        addSubview(titleLabel)
-        addSubview(detailsStackView)
+        [imageView, titleLabel, detailsStackView].forEach(addSubview)
         [servingTimeRow, readyInMinutesRow].forEach(detailsStackView.addArrangedSubview)
     }
 
@@ -84,8 +82,9 @@ final class DetailView: UIView {
         NSLayoutConstraint.activate([
             imageView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 12),
             imageView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            imageView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.width * 0.6),
-            imageView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width * 0.6)
+            imageView.leftAnchor.constraint(equalTo: leftAnchor, constant: 5),
+            imageView.rightAnchor.constraint(equalTo: rightAnchor, constant: -5),
+            imageView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.width)
         ])
 
         // pin detail stack view
