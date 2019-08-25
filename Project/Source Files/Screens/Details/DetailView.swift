@@ -77,12 +77,9 @@ final class DetailView: UIView {
     }
 
     private func addSubviews() {
-        [imageView, titleLabel, detailsStackView, stepsStackView].forEach(addSubview)
-
+        [imageView, detailsStackView, stepsStackView].forEach(addSubview)
         [servingTimeRow, readyInMinutesRow].forEach(detailsStackView.addArrangedSubview)
-
         [firstLabel, secondLabel, thirdLabel].forEach(stepsStackView.addArrangedSubview)
-
     }
 
     private func setupConstraints() {
