@@ -8,4 +8,7 @@ target 'NetguruCollegeApp' do
 	pod 'SwiftLint', '~> 0.34.0'
 	pod 'Kingfisher'
 
+	# Custom UI Elements
+  pod 'NVActivityIndicatorView'
+
 end

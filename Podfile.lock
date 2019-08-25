@@ -1,20 +1,26 @@
 PODS:
   - Kingfisher (5.7.0)
+  - NVActivityIndicatorView (4.7.0):
+    - NVActivityIndicatorView/Presenter (= 4.7.0)
+  - NVActivityIndicatorView/Presenter (4.7.0)
   - SwiftLint (0.34.0)
 
 DEPENDENCIES:
   - Kingfisher
+  - NVActivityIndicatorView
   - SwiftLint (~> 0.34.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Kingfisher
+    - NVActivityIndicatorView
     - SwiftLint
 
 SPEC CHECKSUMS:
   Kingfisher: c7d211b54f1f30d8060aadab177d52b4349c825b
+  NVActivityIndicatorView: b19ddab2576f805cbe0fb2306cba3476e09a1dea
   SwiftLint: 79d48a17c6565dc286c37efb8322c7b450f95c67
 
-PODFILE CHECKSUM: 8f30b9c6fad436a3fe2bd77e143e02e818ec301f
+PODFILE CHECKSUM: 7b8b3195e692ae23465819d904d5620b10f94a02
 
 COCOAPODS: 1.7.5

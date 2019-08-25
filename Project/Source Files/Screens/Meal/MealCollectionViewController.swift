@@ -35,13 +35,17 @@ final class MealCollectionViewController: UIViewController, UICollectionViewData
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        customView.setBlurLoader()
         customView.collectionView.register(MealCollectionViewCell.self, forCellWithReuseIdentifier: MealCollectionViewCell.name)
         customView.collectionView.dataSource = self
         customView.collectionView.delegate = self
 
         viewModel.getMealFromRequest { [weak self] didSucceed in
-            guard didSucceed else { return }
-            self?.customView.collectionView.reloadData()
+            DispatchQueue.main.async {
+                self?.customView.removeBlurLoader()
+                guard didSucceed else { return }
+                self?.customView.collectionView.reloadData()
+            }
         }
     }
 
