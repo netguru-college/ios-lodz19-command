@@ -35,7 +35,7 @@
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RwK-xw-6BB">
                                             <rect key="frame" x="0.0" y="257" width="230" height="40"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Bold" family="Bodoni 72" pointSize="30"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -57,7 +57,7 @@
                             </state>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" red="0.90980392156862744" green="0.25490196078431371" blue="0.094117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.90980392160000001" green="0.25490196079999999" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstItem="LoK-jN-dpH" firstAttribute="centerX" secondItem="1u6-ow-iap" secondAttribute="centerX" id="5bg-Qi-5kd"/>
                         <constraint firstItem="LoK-jN-dpH" firstAttribute="top" secondItem="zJn-gL-myA" secondAttribute="bottom" constant="20" id="GRR-WM-HTP"/>
@@ -66,6 +66,7 @@
                     </constraints>
                 </view>
             </subviews>
+            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="1u6-ow-iap" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="6I0-lg-x5V"/>
                 <constraint firstItem="1u6-ow-iap" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Geg-gY-L9j"/>

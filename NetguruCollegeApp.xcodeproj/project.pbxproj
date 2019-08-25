@@ -456,7 +456,6 @@
 				E8079EED23114A16002E8B5E /* Meal.swift in Sources */,
 				E8079EE4231146BC002E8B5E /* DetailViewModel.swift in Sources */,
 				E814F7E82310714300788FA9 /* WelcomeViewController.swift in Sources */,
-				E814F7F52310719E00788FA9 /* AppFlowCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

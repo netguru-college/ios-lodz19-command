@@ -35,10 +35,14 @@ final class MealCollectionViewController: UIViewController, UICollectionViewData
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "MealViewController"
+        title = viewModel.cousine
         customView.collectionView.register(MealCollectionViewCell.self, forCellWithReuseIdentifier: MealCollectionViewCell.name)
         customView.collectionView.dataSource = self
         customView.collectionView.delegate = self
+        navigationController?.navigationBar.barTintColor = .black
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.tintColor = .white
+        
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

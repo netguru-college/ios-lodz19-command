@@ -16,6 +16,7 @@ final class MealView: UIView {
             collectionView.rightAnchor.constraint(equalTo: rightAnchor),
             collectionView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
         ])
+        backgroundColor = #colorLiteral(red: 0.9369841218, green: 0.3454609811, blue: 0.1157674268, alpha: 1)
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -27,7 +28,7 @@ final class MealView: UIView {
         layout.itemSize = CGSize(width: 70, height: 70)
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.backgroundColor = .red
+        collectionView.backgroundColor = .clear
         return collectionView
     }()
 }
