@@ -27,7 +27,7 @@ final class AppFlowCoordinator: FlowCoordinator {
 
     private func runMealViewController(with cousine: String) {
         let viewController = MealCollectionViewController(
-            mealViewModel: MealViewModel(cousine: cousine),
+            mealViewModel: MealViewModel(cousine: cousine, numberOfOutputMeal: 1),
             delegate: self
         )
         rootViewController.show(viewController, sender: nil)
@@ -49,6 +49,7 @@ extension AppFlowCoordinator: WelcomeViewControllerDelegate {
 extension AppFlowCoordinator: MealCollectionViewControllerDelegate {
 
     func didSelectCell() {
+
         /// TODO: Run Details screen
     }
 }

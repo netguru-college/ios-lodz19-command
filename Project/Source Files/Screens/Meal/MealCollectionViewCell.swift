@@ -9,6 +9,13 @@ final class MealCollectionViewCell: UICollectionViewCell {
 
     static let name =  "MealCollectionViewCell"
 
+    let mealImageView: UIImageView = {
+        let mealImageView = UIImageView()
+        mealImageView.contentMode = .scaleAspectFill
+        mealImageView.translatesAutoresizingMaskIntoConstraints = false
+        return mealImageView
+    }()
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .white
@@ -27,10 +34,4 @@ final class MealCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
-    let mealImageView: UIImageView = {
-        let mealImageView = UIImageView()
-        mealImageView.contentMode = .scaleToFill
-        mealImageView.translatesAutoresizingMaskIntoConstraints = false
-        return mealImageView
-    }()
 }
