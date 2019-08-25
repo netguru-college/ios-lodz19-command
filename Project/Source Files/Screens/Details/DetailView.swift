@@ -7,6 +7,13 @@ import UIKit
 
 final class DetailView: UIView {
     // MARK: properties
+    private let titleLabel: UILabel = {
+        let label = UILabel()
+        label.numberOfLines = 1
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+
     private var imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
@@ -51,22 +58,33 @@ final class DetailView: UIView {
 
         servingTimeRow.feedWithValueString(valueString: "\(meal.servings)")
         readyInMinutesRow.feedWithValueString(valueString: "\(meal.readyInMinutes)")
+
+        titleLabel.text = meal.title
     }
 
     private func addSubviews() {
         addSubview(imageView)
+        addSubview(titleLabel)
         addSubview(detailsStackView)
         [servingTimeRow, readyInMinutesRow].forEach(detailsStackView.addArrangedSubview)
     }
 
     private func setupConstraints() {
+        // pin title label
         NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 5),
-            imageView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            imageView.heightAnchor.constraint(equalToConstant: 100),
-            imageView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width * 0.7)
+            titleLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 5),
+            titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor)
         ])
 
+        // pin image view
+        NSLayoutConstraint.activate([
+            imageView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 5),
+            imageView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            imageView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.width * 0.6),
+            imageView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width * 0.6)
+        ])
+
+        // pin detail stack view
         NSLayoutConstraint.activate([
                 detailsStackView.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 8),
                 detailsStackView.leftAnchor.constraint(equalTo: leftAnchor),
