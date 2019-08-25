@@ -67,7 +67,9 @@ final class MealCollectionViewController: UIViewController, UICollectionViewData
         let meal = viewModel.meals[indexPath.item]
         let fullUrl = viewModel.baseUrl + meal.image
         if let url = URL(string: fullUrl) {
-            cell.mealImageView.kf.setImage(with: url)
+            cell.mealImageView.kf.setImage(with: url, placeholder: #imageLiteral(resourceName: "meal-placeholder"))
+        } else {
+            cell.mealImageView.image = #imageLiteral(resourceName: "meal-placeholder")
         }
         return cell
     }
