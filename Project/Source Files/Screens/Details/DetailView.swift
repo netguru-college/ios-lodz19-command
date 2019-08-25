@@ -10,13 +10,15 @@ final class DetailView: UIView {
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
+        label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
 
-    private var imageView: UIImageView = {
+    let imageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFit
+        imageView.clipsToBounds = true
+        imageView.contentMode = .scaleAspectFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -72,13 +74,15 @@ final class DetailView: UIView {
     private func setupConstraints() {
         // pin title label
         NSLayoutConstraint.activate([
-            titleLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 5),
-            titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor)
+            titleLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 10),
+            titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+            titleLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 10),
+            titleLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -10)
         ])
 
         // pin image view
         NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 5),
+            imageView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 12),
             imageView.centerXAnchor.constraint(equalTo: centerXAnchor),
             imageView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.width * 0.6),
             imageView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width * 0.6)
@@ -86,7 +90,7 @@ final class DetailView: UIView {
 
         // pin detail stack view
         NSLayoutConstraint.activate([
-                detailsStackView.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 8),
+                detailsStackView.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 16),
                 detailsStackView.leftAnchor.constraint(equalTo: leftAnchor),
                 detailsStackView.rightAnchor.constraint(equalTo: rightAnchor),
                 detailsStackView.heightAnchor.constraint(equalToConstant: 90)
