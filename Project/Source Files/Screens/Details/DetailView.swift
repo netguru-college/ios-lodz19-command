@@ -78,9 +78,8 @@ final class DetailView: UIView {
         titleLabel.text = meal.title
     }
 
-    func makeLabel() -> UILabel{
+    func makeLabel() -> UILabel {
         let lable = UILabel()
-        lable.text = "dsaff"
         lable.translatesAutoresizingMaskIntoConstraints = false
         lable.textColor = .white
         return lable
@@ -119,13 +118,13 @@ final class DetailView: UIView {
             detailsStackView.rightAnchor.constraint(equalTo: rightAnchor),
             detailsStackView.heightAnchor.constraint(equalToConstant: 30)
         ])
-
+        
         NSLayoutConstraint.activate([
             stepsStackView.topAnchor.constraint(equalTo: detailsStackView.bottomAnchor, constant: 16),
             stepsStackView.leftAnchor.constraint(equalTo: leftAnchor, constant: 16),
             stepsStackView.rightAnchor.constraint(equalTo: rightAnchor),
             stepsStackView.heightAnchor.constraint(equalToConstant: 90)
-            ])
+        ])
 
         [servingTimeRow, readyInMinutesRow].forEach { $0.heightAnchor.constraint(equalToConstant: 30).isActive = true }
     }
