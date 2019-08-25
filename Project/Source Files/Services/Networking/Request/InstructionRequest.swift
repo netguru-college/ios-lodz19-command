@@ -6,7 +6,11 @@
 struct InstructionsRequest: APIRequest {
 
     var path: String {
-        return "/recipies/\(id)/analyzedInstructions"
+        return "/recipes/\(id)/analyzedInstructions"
+    }
+
+    var parameters: [String: String]? {
+        return ["apiKey": "fbeab34bf4ab4fa6bce392488fabb262"]
     }
 
     var method: APIMethod = .get

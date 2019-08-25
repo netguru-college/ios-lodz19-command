@@ -29,6 +29,7 @@ final class DetailView: UIView {
         let stackView = UIStackView()
         stackView.spacing = 4
         stackView.axis = .vertical
+        stackView.distribution = .fillEqually
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
@@ -72,6 +73,8 @@ final class DetailView: UIView {
         let lable = UILabel()
         lable.translatesAutoresizingMaskIntoConstraints = false
         lable.textColor = .white
+        lable.numberOfLines = 0
+        lable.font = UIFont.systemFont(ofSize: 20)
         return lable
     }
 
@@ -95,17 +98,26 @@ final class DetailView: UIView {
         NSLayoutConstraint.activate([
             detailsStackView.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 16),
             detailsStackView.leftAnchor.constraint(equalTo: leftAnchor),
-            detailsStackView.rightAnchor.constraint(equalTo: rightAnchor),
+            detailsStackView.rightAnchor.constraint(equalTo: rightAnchor, constant: -16),
             detailsStackView.heightAnchor.constraint(equalToConstant: 30)
         ])
- 
+
         NSLayoutConstraint.activate([
             stepsStackView.topAnchor.constraint(equalTo: detailsStackView.bottomAnchor, constant: 16),
             stepsStackView.leftAnchor.constraint(equalTo: leftAnchor, constant: 16),
             stepsStackView.rightAnchor.constraint(equalTo: rightAnchor),
-            stepsStackView.heightAnchor.constraint(equalToConstant: 90)
+            stepsStackView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: 0)
         ])
 
         [servingTimeRow, readyInMinutesRow].forEach { $0.heightAnchor.constraint(equalToConstant: 30).isActive = true }
+    }
+
+    func feedWithSteps(steps: [Step]) {
+        guard steps.count >= 3 else {
+            return
+        }
+        firstLabel.text = "\(1). \(steps[0].step)"
+        secondLabel.text = "\(2). \(steps[1].step)"
+        thirdLabel.text = "\(3). \(steps[2].step)"
     }
 }
