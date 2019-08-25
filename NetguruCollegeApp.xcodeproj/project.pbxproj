@@ -11,12 +11,12 @@
 		04612AC6231169F300ABA33A /* MealCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04612AC2231169F300ABA33A /* MealCollectionViewCell.swift */; };
 		04612AC7231169F300ABA33A /* MealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04612AC3231169F300ABA33A /* MealView.swift */; };
 		04612AC8231169F300ABA33A /* MealViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04612AC4231169F300ABA33A /* MealViewModel.swift */; };
+		106C42DC2312AE0B00A7ABB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 106C42DB2312AE0B00A7ABB5 /* Assets.xcassets */; };
 		04FD8E34231292DB0020C221 /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FD8E33231292DA0020C221 /* Extensions+UIView.swift */; };
 		10DB353923117B8E004C7318 /* MealResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DB353823117B8E004C7318 /* MealResponse.swift */; };
 		10DB353B231275BB004C7318 /* DetailInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DB353A231275BB004C7318 /* DetailInformationView.swift */; };
 		696FE498217635CB005C9FDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FE497217635CB005C9FDD /* AppDelegate.swift */; };
 		696FE49D217635CB005C9FDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 696FE49B217635CB005C9FDD /* Main.storyboard */; };
-		696FE49F217635D2005C9FDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 696FE49E217635D2005C9FDD /* Assets.xcassets */; };
 		696FE4A2217635D2005C9FDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 696FE4A0217635D2005C9FDD /* LaunchScreen.storyboard */; };
 		696FE4AD217635D2005C9FDD /* NetguruCollegeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FE4AC217635D2005C9FDD /* NetguruCollegeAppTests.swift */; };
 		CA45A99224ACF77CB15FD2FD /* Pods_NetguruCollegeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72E7FC592CE32179F357CF88 /* Pods_NetguruCollegeApp.framework */; };
@@ -54,13 +54,13 @@
 		04612AC2231169F300ABA33A /* MealCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealCollectionViewCell.swift; sourceTree = "<group>"; };
 		04612AC3231169F300ABA33A /* MealView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealView.swift; sourceTree = "<group>"; };
 		04612AC4231169F300ABA33A /* MealViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealViewModel.swift; sourceTree = "<group>"; };
+		106C42DB2312AE0B00A7ABB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04FD8E33231292DA0020C221 /* Extensions+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIView.swift"; sourceTree = "<group>"; };
 		10DB353823117B8E004C7318 /* MealResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealResponse.swift; sourceTree = "<group>"; };
 		10DB353A231275BB004C7318 /* DetailInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInformationView.swift; sourceTree = "<group>"; };
 		696FE494217635CB005C9FDD /* NetguruCollegeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetguruCollegeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		696FE497217635CB005C9FDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		696FE49C217635CB005C9FDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		696FE49E217635D2005C9FDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		696FE4A1217635D2005C9FDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		696FE4A3217635D2005C9FDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		696FE4A8217635D2005C9FDD /* NetguruCollegeApp Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NetguruCollegeApp Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -230,7 +230,7 @@
 		696FE4BD21763812005C9FDD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				696FE49E217635D2005C9FDD /* Assets.xcassets */,
+				106C42DB2312AE0B00A7ABB5 /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -395,7 +395,7 @@
 			files = (
 				696FE4A2217635D2005C9FDD /* LaunchScreen.storyboard in Resources */,
 				E814F7F32310717400788FA9 /* WelcomeView.xib in Resources */,
-				696FE49F217635D2005C9FDD /* Assets.xcassets in Resources */,
+				106C42DC2312AE0B00A7ABB5 /* Assets.xcassets in Resources */,
 				696FE49D217635CB005C9FDD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
