@@ -8,14 +8,6 @@ import UIKit
 final class DetailView: UIView {
 
     // MARK: properties
-    private let titleLabel: UILabel = {
-        let label = UILabel()
-        label.numberOfLines = 0
-        label.textAlignment = .center
-        label.textColor = .white
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
 
     let imageView: UIImageView = {
         let imageView = UIImageView()
@@ -39,7 +31,7 @@ final class DetailView: UIView {
         row.translatesAutoresizingMaskIntoConstraints = false
         return row
     }()
-    
+
     private let readyInMinutesRow: DetailInformationView = {
         let row = DetailInformationView(iconName: "clock.png")
         row.translatesAutoresizingMaskIntoConstraints = false
@@ -63,29 +55,20 @@ final class DetailView: UIView {
         imageView.image = mealImage
         servingTimeRow.feedWithValueString(valueString: "\(meal.servings) people")
         readyInMinutesRow.feedWithValueString(valueString: " \(meal.readyInMinutes) minutes")
-        titleLabel.text = meal.title
     }
 
     private func addSubviews() {
-        [imageView, titleLabel, detailsStackView].forEach(addSubview)
+        [imageView, detailsStackView].forEach(addSubview)
         [servingTimeRow, readyInMinutesRow].forEach(detailsStackView.addArrangedSubview)
     }
 
     private func setupConstraints() {
-        // pin title label
-        NSLayoutConstraint.activate([
-            titleLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 10),
-            titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            titleLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 10),
-            titleLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -10)
-        ])
-
         // pin image view
         NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 12),
+            imageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             imageView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            imageView.leftAnchor.constraint(equalTo: leftAnchor, constant: 5),
-            imageView.rightAnchor.constraint(equalTo: rightAnchor, constant: -5),
+            imageView.leftAnchor.constraint(equalTo: leftAnchor),
+            imageView.rightAnchor.constraint(equalTo: rightAnchor),
             imageView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.width * 0.7)
         ])
 
