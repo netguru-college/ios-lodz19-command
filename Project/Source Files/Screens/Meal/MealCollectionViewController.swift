@@ -35,6 +35,7 @@ final class MealCollectionViewController: UIViewController, UICollectionViewData
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "BodoniSvtyTwoITCTT-Bold", size: 17)!]
         title = viewModel.cousine
         customView.collectionView.register(
             MealCollectionViewCell.self,
