@@ -7,102 +7,77 @@ import UIKit
 
 //TODO: extract subview to separate class
 final class DetailView: UIView {
-    // MARK: properties
-    private var meal: Meal?
-    private var imageView: UIImageView?
+    private var imageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFit
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
 
     private let detailsStackView: UIStackView = {
         let stackView = UIStackView()
-        stackView.distribution = .fill
+        stackView.backgroundColor = .green
+        stackView.spacing = 5
         stackView.axis = .vertical
+        stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
 
-    // MARK: initializers
-    init(meal: Meal) {
-        super.init(frame: .zero)
-        self.meal = meal
+    private let firstRow: DetailInformationView = {
+        let firstRow = DetailInformationView(titleString: "Serving time: ")
+        firstRow.translatesAutoresizingMaskIntoConstraints = false
+        return firstRow
+    }()
+    private let secondRow: DetailInformationView = {
+        let secondRow = DetailInformationView(titleString: "Ready in minutes: ")
+        secondRow.translatesAutoresizingMaskIntoConstraints = false
+        return secondRow
+    }()
 
-        initializeViews()
+
+    // MARK: initializers
+    init() {
+        super.init(frame: .zero)
         addSubviews()
         setupConstraints()
-        setupProperties()
+        backgroundColor = .white
     }
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
+    func feedWith(_ meal: Meal) {
+        let mealImage = UIImage(named: meal.image)
+        imageView.image = mealImage
 
-    private func addSubviews() {
-        addSubview(imageView!)
-        setupDetailsStackView()
-        addSubview(detailsStackView)
+        firstRow.feedWithValueString(valueString: "\(meal.serving)")
+        secondRow.feedWithValueString(valueString: "\(meal.readyInMinutes)")
     }
 
-    private func initializeViews() {
-        let imageView: UIImage! = UIImage(named: meal?.image ?? "image2.jpeg")
-        self.imageView = {
-            let imageView = UIImageView(image: imageView)
-            imageView.contentMode = .scaleAspectFit
-            imageView.translatesAutoresizingMaskIntoConstraints = false
-            return imageView
-        }()
+    private func addSubviews() {
+        addSubview(imageView)
+        addSubview(detailsStackView)
+        [firstRow, secondRow].forEach(detailsStackView.addArrangedSubview)
     }
 
     private func setupConstraints() {
-        setupImageViewConstraints()
-        setupStackViewConstraints()
-    }
-
-    // MARK: Constraints setters for necessary views
-    private func setupImageViewConstraints() {
         NSLayoutConstraint.activate([
-            imageView!.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 5),
-            imageView!.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            imageView!.heightAnchor.constraint(equalToConstant: 100)
+            imageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 5),
+            imageView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            imageView.heightAnchor.constraint(equalToConstant: 100),
+            imageView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width * 0.7)
             ])
 
+        NSLayoutConstraint.activate([
+            detailsStackView.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 8),
+            detailsStackView.leftAnchor.constraint(equalTo: leftAnchor),
+            detailsStackView.rightAnchor.constraint(equalTo: rightAnchor),
+            detailsStackView.heightAnchor.constraint(equalToConstant: 90)
+            ])
+
+            firstRow.heightAnchor.constraint(equalToConstant: 30).isActive = true
+            secondRow.heightAnchor.constraint(equalToConstant: 30).isActive = true
     }
-
-    private func setupStackViewConstraints() {
-       NSLayoutConstraint.activate([
-            
-        ])
-    }
-
-
-    // adds necessary rows for detail stack view
-    private func setupDetailsStackView() {
-        if let meal = self.meal {
-            let servingStackView = detailStackViewRowFactory(labelText: "Serving time:", labelValue: "\(meal.serving)")
-            let readyInMinutesStackView = detailStackViewRowFactory(labelText: "Ready in minutes:", labelValue: "\(meal.serving)")
-
-            detailsStackView.addSubview(servingStackView)
-            detailsStackView.addSubview(readyInMinutesStackView)
-        }
-    }
-
-    // initializes global view properties e.g background color
-    private func setupProperties() {
-        backgroundColor = .lightGray
-    }
-
-    // factory method returning single view nested in meal detail stackview
-    private func detailStackViewRowFactory(labelText: String, labelValue: String) -> UIStackView {
-        let horizontalStackView = UIStackView()
-        horizontalStackView.distribution = .fill
-        horizontalStackView.axis = .horizontal
-
-        let propertyLabel = UILabel()
-        propertyLabel.text = labelText
-
-        let propertyValue = UILabel()
-        propertyLabel.text = labelValue
-
-        horizontalStackView.addSubview(propertyLabel)
-        horizontalStackView.addSubview(propertyValue)
-
-        return horizontalStackView
-    }
+    
 }
