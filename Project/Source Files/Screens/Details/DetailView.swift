@@ -27,7 +27,7 @@ final class DetailView: UIView {
         row.translatesAutoresizingMaskIntoConstraints = false
         return row
     }()
-    private let secondRow: DetailInformationView = {
+    private let readyInMinutesRow: DetailInformationView = {
         let row = DetailInformationView(titleString: "Ready in minutes: ")
         row.translatesAutoresizingMaskIntoConstraints = false
         return row
@@ -49,14 +49,14 @@ final class DetailView: UIView {
         let mealImage = UIImage(named: meal.image)
         imageView.image = mealImage
 
-        servingTimeRow.feedWithValueString(valueString: "\(meal.serving)")
-        secondRow.feedWithValueString(valueString: "\(meal.readyInMinutes)")
+        servingTimeRow.feedWithValueString(valueString: "\(meal.servings)")
+        readyInMinutesRow.feedWithValueString(valueString: "\(meal.readyInMinutes)")
     }
 
     private func addSubviews() {
         addSubview(imageView)
         addSubview(detailsStackView)
-        [servingTimeRow, secondRow].forEach(detailsStackView.addArrangedSubview)
+        [servingTimeRow, readyInMinutesRow].forEach(detailsStackView.addArrangedSubview)
     }
 
     private func setupConstraints() {
@@ -74,7 +74,6 @@ final class DetailView: UIView {
                 detailsStackView.heightAnchor.constraint(equalToConstant: 90)
         ])
 
-            servingTimeRow.heightAnchor.constraint(equalToConstant: 30).isActive = true
-            secondRow.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        [servingTimeRow, readyInMinutesRow].forEach { $0.heightAnchor.constraint(equalToConstant: 30).isActive = true }
     }
 }

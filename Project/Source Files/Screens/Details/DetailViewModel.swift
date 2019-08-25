@@ -11,7 +11,7 @@ final class DefaultDetailViewModel: DetailViewModel {
 
     let meal: Meal
 
-    public init(meal: Meal) {
+    init(meal: Meal) {
         self.meal = meal
     }
 }

@@ -8,6 +8,6 @@ struct Meal: Decodable {
     let image: String
     let imageUrls: [String]
     let readyInMinutes: Int
-    let serving: Int
+    let servings: Int
     let title: String
 }

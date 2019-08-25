@@ -53,7 +53,7 @@ extension AppFlowCoordinator: MealCollectionViewControllerDelegate {
                                 image: "image2.jpg",
                                 imageUrls: ["image2.jpg"],
                                 readyInMinutes: 45,
-                                serving: 6,
+                                servings: 6,
                                 title: "Baked Cheese Manicotti"
         )
         let nextViewController = DetailViewController(viewModel: DefaultDetailViewModel(meal: mockMealJson))

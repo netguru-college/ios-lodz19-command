@@ -5,7 +5,7 @@
 import Foundation
 import UIKit
 
-class DetailInformationView : UIView {
+class DetailInformationView: UIView {
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -38,13 +38,13 @@ class DetailInformationView : UIView {
         addSubview(valueLabel)
 
         NSLayoutConstraint.activate([
-                    titleLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 15),
-                    titleLabel.topAnchor.constraint(equalTo: self.topAnchor),
-                    titleLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-                    valueLabel.rightAnchor.constraint(equalTo: self.rightAnchor),
-                    valueLabel.topAnchor.constraint(equalTo: self.topAnchor),
-                    valueLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-                    titleLabel.rightAnchor.constraint(equalTo: valueLabel.leftAnchor)
-            ])
+                titleLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 15),
+                titleLabel.topAnchor.constraint(equalTo: self.topAnchor),
+                titleLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+                valueLabel.rightAnchor.constraint(equalTo: self.rightAnchor),
+                valueLabel.topAnchor.constraint(equalTo: self.topAnchor),
+                valueLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+                titleLabel.rightAnchor.constraint(equalTo: valueLabel.leftAnchor)
+        ])
     }
 }
