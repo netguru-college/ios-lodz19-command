@@ -12,6 +12,7 @@ final class DetailView: UIView {
         let label = UILabel()
         label.numberOfLines = 0
         label.textAlignment = .center
+        label.textColor = .white
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -27,8 +28,8 @@ final class DetailView: UIView {
 
     private let detailsStackView: UIStackView = {
         let stackView = UIStackView()
-        stackView.spacing = 5
-        stackView.axis = .vertical
+        stackView.spacing = 4
+        stackView.axis = .horizontal
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
@@ -38,6 +39,7 @@ final class DetailView: UIView {
         row.translatesAutoresizingMaskIntoConstraints = false
         return row
     }()
+    
     private let readyInMinutesRow: DetailInformationView = {
         let row = DetailInformationView(titleString: "Ready in")
         row.translatesAutoresizingMaskIntoConstraints = false
@@ -84,15 +86,15 @@ final class DetailView: UIView {
             imageView.centerXAnchor.constraint(equalTo: centerXAnchor),
             imageView.leftAnchor.constraint(equalTo: leftAnchor, constant: 5),
             imageView.rightAnchor.constraint(equalTo: rightAnchor, constant: -5),
-            imageView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.width)
+            imageView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.width * 0.7)
         ])
 
         // pin detail stack view
         NSLayoutConstraint.activate([
-                detailsStackView.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 16),
-                detailsStackView.leftAnchor.constraint(equalTo: leftAnchor),
-                detailsStackView.rightAnchor.constraint(equalTo: rightAnchor),
-                detailsStackView.heightAnchor.constraint(equalToConstant: 90)
+            detailsStackView.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 16),
+            detailsStackView.leftAnchor.constraint(equalTo: leftAnchor),
+            detailsStackView.rightAnchor.constraint(equalTo: rightAnchor),
+            detailsStackView.heightAnchor.constraint(equalToConstant: 30)
         ])
 
         [servingTimeRow, readyInMinutesRow].forEach { $0.heightAnchor.constraint(equalToConstant: 30).isActive = true }
