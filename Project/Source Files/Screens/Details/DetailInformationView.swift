@@ -28,7 +28,6 @@ class DetailInformationView: UIView {
     init(iconName: String) {
         super.init(frame: .zero)
         imageView.image = UIImage(named: iconName)
-        imageView.backgroundColor = #colorLiteral(red: 0.9369841218, green: 0.3454609811, blue: 0.1157674268, alpha: 1)
         setupConstraints()
     }
 
