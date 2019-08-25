@@ -27,7 +27,7 @@ final class AppFlowCoordinator: FlowCoordinator {
 
     private func runMealViewController(with cousine: String) {
         let viewController = MealCollectionViewController(
-            mealViewModel: MealViewModel(cousine: cousine, numberOfOutputMeal: 1),
+            mealViewModel: MealViewModel(cousine: cousine, numberOfOutputMeal: 10),
             delegate: self
         )
         viewController.title = cousine
