@@ -4,11 +4,9 @@ use_frameworks!
 inhibit_all_warnings!
 
 target 'NetguruCollegeApp' do
-	# Put new pods here
+
 	pod 'SwiftLint', '~> 0.34.0'
 	pod 'Kingfisher'
-
-	# Custom UI Elements
   pod 'NVActivityIndicatorView'
 
 end

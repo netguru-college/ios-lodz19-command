@@ -8,8 +8,8 @@ import NVActivityIndicatorView
 
 extension UIView {
 
-    fileprivate var blurViewTag: Int {
-        return 1
+    private var blurViewTag: Int {
+        return 111
     }
 
     /// Show spinner loader.
@@ -45,9 +45,13 @@ extension UIView {
     }
 
     internal func removeBlurLoader() {
-        if let blurLoader = viewWithTag(blurViewTag), self.contains(blurLoader) {
-            blurLoader.removeFromSuperview()
-
+        guard
+            let blurLoader = viewWithTag(blurViewTag),
+            contains(blurLoader)
+        else {
+            return
         }
+        blurLoader.removeFromSuperview()
+
     }
 }

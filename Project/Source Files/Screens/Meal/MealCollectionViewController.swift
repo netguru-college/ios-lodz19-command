@@ -35,7 +35,6 @@ final class MealCollectionViewController: UIViewController, UICollectionViewData
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        customView.setBlurLoader()
         title = viewModel.cousine
         customView.collectionView.register(
             MealCollectionViewCell.self,
@@ -47,6 +46,7 @@ final class MealCollectionViewController: UIViewController, UICollectionViewData
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         navigationController?.navigationBar.tintColor = .white
 
+        customView.setBlurLoader()
         viewModel.getMealFromRequest { [weak self] didSucceed in
             DispatchQueue.main.async {
                 self?.customView.removeBlurLoader()
