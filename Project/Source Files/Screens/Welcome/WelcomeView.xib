@@ -23,7 +23,7 @@
                             <rect key="frame" x="72.5" y="185" width="230" height="297"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="IHy-fp-deE">
-                                    <rect key="frame" x="0.0" y="0.0" width="230" height="266"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="230" height="297"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JTO-Ci-CCw">
                                             <rect key="frame" x="0.0" y="0.0" width="230" height="215"/>
@@ -34,7 +34,7 @@
                                             <state key="normal" title="chooseRandomCussine " image="asset"/>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RwK-xw-6BB">
-                                            <rect key="frame" x="0.0" y="257" width="230" height="9"/>
+                                            <rect key="frame" x="0.0" y="257" width="230" height="40"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -44,20 +44,23 @@
                                         <constraint firstAttribute="width" constant="230" id="rrZ-jL-pXL"/>
                                     </constraints>
                                 </stackView>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LoK-jN-dpH">
-                                    <rect key="frame" x="0.0" y="297" width="230" height="0.0"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" id="XRC-Rd-dUX"/>
-                                    </constraints>
-                                    <state key="normal" title="NEXT">
-                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </state>
-                                </button>
                             </subviews>
                         </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LoK-jN-dpH">
+                            <rect key="frame" x="157.5" y="502" width="60" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="1TV-Jw-Yef"/>
+                                <constraint firstAttribute="width" constant="60" id="n3t-ie-MhQ"/>
+                            </constraints>
+                            <state key="normal" title="NEXT">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" red="0.90980392156862744" green="0.25490196078431371" blue="0.094117647058823528" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
+                        <constraint firstItem="LoK-jN-dpH" firstAttribute="centerX" secondItem="1u6-ow-iap" secondAttribute="centerX" id="5bg-Qi-5kd"/>
+                        <constraint firstItem="LoK-jN-dpH" firstAttribute="top" secondItem="zJn-gL-myA" secondAttribute="bottom" constant="20" id="GRR-WM-HTP"/>
                         <constraint firstItem="zJn-gL-myA" firstAttribute="centerY" secondItem="1u6-ow-iap" secondAttribute="centerY" id="qFA-Kr-fmz"/>
                         <constraint firstItem="zJn-gL-myA" firstAttribute="centerX" secondItem="1u6-ow-iap" secondAttribute="centerX" id="sCk-jV-DeX"/>
                     </constraints>
