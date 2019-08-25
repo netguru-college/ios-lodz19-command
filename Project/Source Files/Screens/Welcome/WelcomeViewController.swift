@@ -8,7 +8,6 @@ import UIKit
 protocol WelcomeViewControllerDelegate: AnyObject {
     func didTapNext(with cousine: String)
 }
-
 final class WelcomeViewController: UIViewController {
 
     weak var delegate: WelcomeViewControllerDelegate?
@@ -16,14 +15,12 @@ final class WelcomeViewController: UIViewController {
     private var customView: WelcomeView {
         return view as! WelcomeView
     }
-
     private var generatedCousine: String? {
         didSet {
             customView.cusineLabel.text = generatedCousine
             customView.nextScreenButton.isHidden = generatedCousine == nil
         }
     }
-
     init(delegate: WelcomeViewControllerDelegate) {
         super.init(nibName: nil, bundle: nil)
         self.delegate = delegate
@@ -45,7 +42,9 @@ final class WelcomeViewController: UIViewController {
     override func loadView() {
         view = WelcomeView.instanceFromNib()
     }
-
+    override func viewDidLoad() {
+        customView.nextScreenButton.layer.cornerRadius = 5
+    }
     private func setupCallBacks () {
         customView.randomButton.addTarget(self, action: #selector(didTapRandomButton), for: .touchUpInside)
         customView.nextScreenButton.addTarget(self, action: #selector(didTapNext), for: .touchUpInside)

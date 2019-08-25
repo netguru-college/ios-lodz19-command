@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1u6-ow-iap">
+                <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1u6-ow-iap">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="zJn-gL-myA">
@@ -46,23 +46,35 @@
                                 </stackView>
                             </subviews>
                         </stackView>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LoK-jN-dpH">
-                            <rect key="frame" x="157.5" y="502" width="60" height="35"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap Me!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Qm-Qc-m2U">
+                            <rect key="frame" x="122.5" y="129" width="130" height="48"/>
+                            <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Bold" family="Bodoni 72" pointSize="40"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LoK-jN-dpH">
+                            <rect key="frame" x="28" y="601" width="318" height="58"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="35" id="1TV-Jw-Yef"/>
-                                <constraint firstAttribute="width" constant="60" id="n3t-ie-MhQ"/>
+                                <constraint firstAttribute="width" constant="318" id="QHA-ba-LTD"/>
+                                <constraint firstAttribute="height" constant="58" id="hPl-EW-y60"/>
                             </constraints>
-                            <state key="normal" title="NEXT">
+                            <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Bold" family="Bodoni 72" pointSize="40"/>
+                            <state key="normal" title="Show it">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                         </button>
                     </subviews>
                     <color key="backgroundColor" red="0.90980392160000001" green="0.25490196079999999" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstItem="LoK-jN-dpH" firstAttribute="centerX" secondItem="1u6-ow-iap" secondAttribute="centerX" id="5bg-Qi-5kd"/>
-                        <constraint firstItem="LoK-jN-dpH" firstAttribute="top" secondItem="zJn-gL-myA" secondAttribute="bottom" constant="20" id="GRR-WM-HTP"/>
+                        <constraint firstItem="LoK-jN-dpH" firstAttribute="bottom" secondItem="1u6-ow-iap" secondAttribute="bottomMargin" id="1Na-dt-qL6"/>
+                        <constraint firstItem="zJn-gL-myA" firstAttribute="top" secondItem="0Qm-Qc-m2U" secondAttribute="bottom" constant="8" id="TYM-gC-Ywk"/>
                         <constraint firstItem="zJn-gL-myA" firstAttribute="centerY" secondItem="1u6-ow-iap" secondAttribute="centerY" id="qFA-Kr-fmz"/>
                         <constraint firstItem="zJn-gL-myA" firstAttribute="centerX" secondItem="1u6-ow-iap" secondAttribute="centerX" id="sCk-jV-DeX"/>
+                        <constraint firstItem="zJn-gL-myA" firstAttribute="top" secondItem="0Qm-Qc-m2U" secondAttribute="bottom" constant="8" symbolic="YES" id="sHN-oh-aRy"/>
+                        <constraint firstItem="LoK-jN-dpH" firstAttribute="leading" secondItem="1u6-ow-iap" secondAttribute="leading" constant="28" id="scq-YC-mU7"/>
+                        <constraint firstItem="LoK-jN-dpH" firstAttribute="centerX" secondItem="1u6-ow-iap" secondAttribute="centerX" id="vLo-Up-Zac"/>
+                        <constraint firstItem="0Qm-Qc-m2U" firstAttribute="centerX" secondItem="1u6-ow-iap" secondAttribute="centerX" id="vuN-Oz-IjV"/>
                     </constraints>
                 </view>
             </subviews>
