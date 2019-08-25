@@ -46,9 +46,13 @@ final class MealCollectionViewController: UIViewController, UICollectionViewData
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         navigationController?.navigationBar.tintColor = .white
 
+        customView.setBlurLoader()
         viewModel.getMealFromRequest { [weak self] didSucceed in
-            guard didSucceed else { return }
-            self?.customView.collectionView.reloadData()
+            DispatchQueue.main.async {
+                self?.customView.removeBlurLoader()
+                guard didSucceed else { return }
+                self?.customView.collectionView.reloadData()
+            }
         }
     }
 
@@ -63,7 +67,9 @@ final class MealCollectionViewController: UIViewController, UICollectionViewData
         let meal = viewModel.meals[indexPath.item]
         let fullUrl = viewModel.baseUrl + meal.image
         if let url = URL(string: fullUrl) {
-            cell.mealImageView.kf.setImage(with: url)
+            cell.mealImageView.kf.setImage(with: url, placeholder: #imageLiteral(resourceName: "meal-placeholder"))
+        } else {
+            cell.mealImageView.image = #imageLiteral(resourceName: "meal-placeholder")
         }
         return cell
     }
