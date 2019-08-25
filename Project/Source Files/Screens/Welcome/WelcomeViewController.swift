@@ -43,6 +43,7 @@ final class WelcomeViewController: UIViewController {
         view = WelcomeView.instanceFromNib()
     }
     override func viewDidLoad() {
+        super.viewDidLoad()
         customView.nextScreenButton.layer.cornerRadius = 5
     }
     private func setupCallBacks () {

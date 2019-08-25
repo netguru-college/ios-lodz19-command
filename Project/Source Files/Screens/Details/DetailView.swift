@@ -55,7 +55,6 @@ final class DetailView: UIView {
         imageView.image = mealImage
         servingTimeRow.feedWithValueString(valueString: "\(meal.servings) people")
         readyInMinutesRow.feedWithValueString(valueString: " \(meal.readyInMinutes) minutes")
-        titleLabel.text = meal.title
     }
 
     private func addSubviews() {
