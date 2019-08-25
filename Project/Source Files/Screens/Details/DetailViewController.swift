@@ -13,7 +13,7 @@ final class DetailViewController: UIViewController {
 
     private let viewModel: DetailViewModel
 
-    public init(viewModel: DetailViewModel) {
+    init(viewModel: DetailViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
