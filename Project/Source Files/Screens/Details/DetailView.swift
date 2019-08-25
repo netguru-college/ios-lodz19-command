@@ -8,7 +8,6 @@ import UIKit
 final class DetailView: UIView {
 
     // MARK: properties
-
     let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.clipsToBounds = true
@@ -99,7 +98,7 @@ final class DetailView: UIView {
             detailsStackView.rightAnchor.constraint(equalTo: rightAnchor),
             detailsStackView.heightAnchor.constraint(equalToConstant: 30)
         ])
-        
+ 
         NSLayoutConstraint.activate([
             stepsStackView.topAnchor.constraint(equalTo: detailsStackView.bottomAnchor, constant: 16),
             stepsStackView.leftAnchor.constraint(equalTo: leftAnchor, constant: 16),
