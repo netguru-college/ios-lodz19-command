@@ -11,7 +11,7 @@ final class DetailView: UIView {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        return imageView
+        return imageVie
     }()
 
     private let detailsStackView: UIStackView = {
@@ -33,7 +33,7 @@ final class DetailView: UIView {
         secondRow.translatesAutoresizingMaskIntoConstraints = false
         return secondRow
     }()
-
+    
 
     // MARK: initializers
     init() {

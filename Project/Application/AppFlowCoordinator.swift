@@ -14,10 +14,23 @@ final class AppFlowCoordinator: FlowCoordinator {
     }
 
     func initializeApp() {
-        let viewController = HelloWorldViewController(delegate: self)
-        rootViewController = UINavigationController(rootViewController: viewController)
+        rootViewController = UINavigationController()
         window.rootViewController = rootViewController
         window.makeKeyAndVisible()
+        runWelcomeScreen()
+    }
+
+    private func runWelcomeScreen() {
+        let viewController = WelcomeViewController(delegate: self)
+        rootViewController.show(viewController, sender: nil)
+    }
+
+    private func runMealViewController(with cousine: String) {
+        let viewController = MealCollectionViewController(
+            mealViewModel: MealViewModel(cousine: cousine),
+            delegate: self
+        )
+        rootViewController.show(viewController, sender: nil)
     }
 
     private func runDetailsScreen(with meal: Meal) {
@@ -26,21 +39,23 @@ final class AppFlowCoordinator: FlowCoordinator {
     }
 }
 
-extension AppFlowCoordinator: HelloWorldViewControllerDelegate {
+extension AppFlowCoordinator: WelcomeViewControllerDelegate {
 
-    func didSelectNextButton() {
-        let nextViewController = WelcomeViewController()
-        rootViewController.show(nextViewController, sender: nil)
+    func didTapNext(with cousine: String) {
+        runMealViewController(with: cousine)
     }
+}
 
-    func didSelectDetailViewButton() {
+extension AppFlowCoordinator: MealCollectionViewControllerDelegate {
+
+    func didSelectCell() {
         let mockMealJson = Meal(id: 633508,
                                 image: "image2.jpg",
                                 imageUrls: ["image2.jpg"],
                                 readyInMinutes: 45,
                                 serving: 6,
                                 title: "Baked Cheese Manicotti"
-                               )
+        )
         let nextViewController = DetailViewController(viewModel: DefaultDetailViewModel(meal: mockMealJson))
         rootViewController.show(nextViewController, sender: nil)
     }
