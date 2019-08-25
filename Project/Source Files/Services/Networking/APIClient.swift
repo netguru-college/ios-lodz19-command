@@ -26,7 +26,10 @@ final class APIClient {
         }
 
         var components = URLComponents(url: url, resolvingAgainstBaseURL: false)!
+
         components.queryItems = request.parameters?.compactMap { URLQueryItem(name: $0.key, value: $0.value) }
+        components.queryItems?.append(URLQueryItem(name: "apiKey", value: "fbeab34bf4ab4fa6bce392488fabb262"))
+
         if let urlWithParams = components.url {
             url = urlWithParams
         }
@@ -63,7 +66,6 @@ final class APIClient {
                     failure(APIError("Data was nil!"))
                     return
                 }
-
                 do {
                     let model = try JSONDecoder().decode(T.self, from: data)
                     success(model)

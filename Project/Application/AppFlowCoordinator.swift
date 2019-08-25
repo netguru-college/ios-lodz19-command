@@ -27,14 +27,15 @@ final class AppFlowCoordinator: FlowCoordinator {
 
     private func runMealViewController(with cousine: String) {
         let viewController = MealCollectionViewController(
-            mealViewModel: MealViewModel(cousine: cousine),
+            mealViewModel: MealViewModel(cousine: cousine, numberOfOutputMeal: 1),
             delegate: self
         )
+        viewController.title = cousine
         rootViewController.show(viewController, sender: nil)
     }
 
-    private func runDetailsScreen(with meal: Meal) {
-        let viewController = DetailViewController(viewModel: DefaultDetailViewModel(meal: meal))
+    private func runDetailsScreen(with meal: Meal, imageUrl: String) {
+        let viewController = DetailViewController(viewModel: DefaultDetailViewModel(meal: meal, imageUrl: imageUrl))
         rootViewController.show(viewController, sender: nil)
     }
 }
@@ -48,15 +49,7 @@ extension AppFlowCoordinator: WelcomeViewControllerDelegate {
 
 extension AppFlowCoordinator: MealCollectionViewControllerDelegate {
 
-    func didSelectCell() {
-        let mockMealJson = Meal(id: 633508,
-                                image: "image2.jpg",
-                                imageUrls: ["image2.jpg"],
-                                readyInMinutes: 45,
-                                servings: 6,
-                                title: "Baked Cheese Manicotti"
-        )
-        let nextViewController = DetailViewController(viewModel: DefaultDetailViewModel(meal: mockMealJson))
-        rootViewController.show(nextViewController, sender: nil)
+    func didSelectCell(meal: Meal, imageUrl: String) {
+       runDetailsScreen(with: meal, imageUrl: imageUrl)
     }
 }
