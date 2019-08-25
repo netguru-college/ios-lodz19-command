@@ -14,7 +14,9 @@ final class AppFlowCoordinator: FlowCoordinator {
     }
 
     func initializeApp() {
-        rootViewController = UINavigationController()
+        let navigationController = UINavigationController()
+        navigationController.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "BodoniSvtyTwoITCTT-Bold", size: 17)!]
+        rootViewController = navigationController
         window.rootViewController = rootViewController
         window.makeKeyAndVisible()
         runWelcomeScreen()
