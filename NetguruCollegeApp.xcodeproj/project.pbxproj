@@ -11,6 +11,8 @@
 		04612AC6231169F300ABA33A /* MealCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04612AC2231169F300ABA33A /* MealCollectionViewCell.swift */; };
 		04612AC7231169F300ABA33A /* MealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04612AC3231169F300ABA33A /* MealView.swift */; };
 		04612AC8231169F300ABA33A /* MealViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04612AC4231169F300ABA33A /* MealViewModel.swift */; };
+
+		04B0FA8A2312ABD700FF0012 /* Extensions+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B0FA892312ABD700FF0012 /* Extensions+UIViewController.swift */; };
 		106C42DC2312AE0B00A7ABB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 106C42DB2312AE0B00A7ABB5 /* Assets.xcassets */; };
 		04FD8E34231292DB0020C221 /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FD8E33231292DA0020C221 /* Extensions+UIView.swift */; };
 		10DB353923117B8E004C7318 /* MealResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DB353823117B8E004C7318 /* MealResponse.swift */; };
@@ -22,6 +24,7 @@
 		CA45A99224ACF77CB15FD2FD /* Pods_NetguruCollegeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72E7FC592CE32179F357CF88 /* Pods_NetguruCollegeApp.framework */; };
 		D33AEFE723116F7E00F2A3A0 /* RandomMealRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33AEFE623116F7E00F2A3A0 /* RandomMealRequest.swift */; };
 		D340A21F231154DE002FC4AE /* CuisineGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D340A21E231154DE002FC4AE /* CuisineGenerator.swift */; };
+
 		D385410D2312AE5C00F17F0F /* InstructionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D385410C2312AE5C00F17F0F /* InstructionRequest.swift */; };
 		D3B77ABF2312AFA900362D1C /* Instructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B77ABE2312AFA900362D1C /* Instructions.swift */; };
 		E8079EE2231146B6002E8B5E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8079EE1231146B6002E8B5E /* DetailViewController.swift */; };
@@ -54,6 +57,7 @@
 		04612AC2231169F300ABA33A /* MealCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealCollectionViewCell.swift; sourceTree = "<group>"; };
 		04612AC3231169F300ABA33A /* MealView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealView.swift; sourceTree = "<group>"; };
 		04612AC4231169F300ABA33A /* MealViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealViewModel.swift; sourceTree = "<group>"; };
+		04B0FA892312ABD700FF0012 /* Extensions+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIViewController.swift"; sourceTree = "<group>"; };
 		106C42DB2312AE0B00A7ABB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04FD8E33231292DA0020C221 /* Extensions+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIView.swift"; sourceTree = "<group>"; };
 		10DB353823117B8E004C7318 /* MealResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealResponse.swift; sourceTree = "<group>"; };
@@ -118,12 +122,13 @@
 			path = Meal;
 			sourceTree = "<group>";
 		};
-		04FD8E32231292BE0020C221 /* New Group */ = {
+		04FD8E32231292BE0020C221 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				04FD8E33231292DA0020C221 /* Extensions+UIView.swift */,
+				04B0FA892312ABD700FF0012 /* Extensions+UIViewController.swift */,
 			);
-			path = "New Group";
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		4EF6845F21E6435400DA50FC /* Services */ = {
@@ -188,7 +193,7 @@
 		696FE4B7217637B5005C9FDD /* Project */ = {
 			isa = PBXGroup;
 			children = (
-				04FD8E32231292BE0020C221 /* New Group */,
+				04FD8E32231292BE0020C221 /* Extensions */,
 				696FE4BF217638AD005C9FDD /* Application */,
 				696FE4B8217637C7005C9FDD /* Source Files */,
 				696FE4BC217637FB005C9FDD /* Interfaces */,
@@ -474,6 +479,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04B0FA8A2312ABD700FF0012 /* Extensions+UIViewController.swift in Sources */,
 				04FD8E34231292DB0020C221 /* Extensions+UIView.swift in Sources */,
 				E814F7DD2310712B00788FA9 /* FlowCoordinator.swift in Sources */,
 				04612AC8231169F300ABA33A /* MealViewModel.swift in Sources */,
