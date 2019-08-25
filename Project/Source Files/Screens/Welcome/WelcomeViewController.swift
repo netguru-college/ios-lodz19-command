@@ -17,7 +17,12 @@ final class WelcomeViewController: UIViewController {
         return view as! WelcomeView
     }
 
-    private var generatedCousine: String?
+    private var generatedCousine: String? {
+        didSet {
+            customView.cusineLabel.text = generatedCousine
+            customView.nextScreenButton.isHidden = generatedCousine == nil
+        }
+    }
 
     init(delegate: WelcomeViewControllerDelegate) {
         super.init(nibName: nil, bundle: nil)
@@ -27,6 +32,14 @@ final class WelcomeViewController: UIViewController {
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+        generatedCousine = nil
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(false, animated: false)
     }
 
     override func loadView() {
@@ -41,7 +54,6 @@ final class WelcomeViewController: UIViewController {
     @objc private func didTapRandomButton() {
         let newGenerator = CuisineGenerator()
         generatedCousine = newGenerator.getRandom()
-        customView.cusineLabel.text = generatedCousine
     }
 
     @objc private func didTapNext() {

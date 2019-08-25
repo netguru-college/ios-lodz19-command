@@ -12,10 +12,10 @@ final class MealViewModel {
 
     var meals: [Meal] = []
 
-    var mealPhotos: [UIImage] = []
+    let cousine: String
+
     private let apiClient = APIClient()
 
-    private let cousine: String
     private let numberOfOutputMeal: Int
 
     init(cousine: String, numberOfOutputMeal: Int) {
@@ -23,15 +23,17 @@ final class MealViewModel {
         self.numberOfOutputMeal = numberOfOutputMeal
     }
 
-    func getMealFromRequest(complition: @escaping (Bool)->())  {
+    func getMealFromRequest(complition: @escaping (Bool) -> Void) {
         let request = RandomMealRequest(cuisine: cousine, number: numberOfOutputMeal)
-        apiClient.sendRequestAndDecode(request: request, success: { [weak self] (mealResponse: MealResponse) in
-            self?.baseUrl = mealResponse.baseUri
-            self?.meals = mealResponse.results
-            complition(true)
-        }) { _ in
+        apiClient.sendRequestAndDecode(
+            request: request,
+            success: { [weak self] (mealResponse: MealResponse) in
+                self?.baseUrl = mealResponse.baseUri
+                self?.meals = mealResponse.results
+                complition(true)
+            }
+        ) { _ in
             complition(false)
         }
     }
-
 }

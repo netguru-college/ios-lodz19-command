@@ -18,6 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let window = UIWindow(frame: UIScreen.main.bounds)
         self.window = window
+        let navigationBarApperiance = UINavigationBar.appearance()
+        navigationBarApperiance.tintColor = .white
+        navigationBarApperiance.barTintColor = .black
+        navigationBarApperiance.shadowImage = UIImage()
         appFlowController = AppFlowCoordinator(window: window)
         appFlowController?.initializeApp()
 
