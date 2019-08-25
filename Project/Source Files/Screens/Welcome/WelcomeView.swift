@@ -22,5 +22,7 @@ final class WelcomeView: UIView {
 
     func setupLayout() {
         randomButton.layer.cornerRadius = randomButton.frame.height / 2
+        nextScreenButton.isHidden = true
     }
+
 }

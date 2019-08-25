@@ -36,9 +36,16 @@ final class MealCollectionViewController: UIViewController, UICollectionViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         customView.setBlurLoader()
-        customView.collectionView.register(MealCollectionViewCell.self, forCellWithReuseIdentifier: MealCollectionViewCell.name)
+        title = viewModel.cousine
+        customView.collectionView.register(
+            MealCollectionViewCell.self,
+            forCellWithReuseIdentifier: MealCollectionViewCell.name
+        )
         customView.collectionView.dataSource = self
         customView.collectionView.delegate = self
+        navigationController?.navigationBar.barTintColor = .black
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.tintColor = .white
 
         viewModel.getMealFromRequest { [weak self] didSucceed in
             DispatchQueue.main.async {
