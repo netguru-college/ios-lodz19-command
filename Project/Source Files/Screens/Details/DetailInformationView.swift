@@ -43,6 +43,7 @@ class DetailInformationView: UIView {
         NSLayoutConstraint.activate([
             imageView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 8),
             imageView.topAnchor.constraint(equalTo: self.topAnchor),
+            imageView.rightAnchor.constraint(equalTo: self.valueLabel.leftAnchor, constant: 8),
             imageView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             imageView.widthAnchor.constraint(equalToConstant: 30),
             imageView.heightAnchor.constraint(equalToConstant: 30),
