@@ -7,7 +7,6 @@ import Foundation
 
 final class APIClient {
 
-    let imageCache = NSCache<AnyObject, AnyObject>()
     let baseURL = "https://api.spoonacular.com"
     let sessionConfiguration = URLSessionConfiguration.default
     lazy var session = URLSession(configuration: sessionConfiguration)
@@ -60,7 +59,6 @@ final class APIClient {
         success: @escaping (T) -> Void,
         failure: @escaping (Error?) -> Void
     ) {
-        print(request)
         sendRequest(
             request: request,
             success: { data in
@@ -68,9 +66,6 @@ final class APIClient {
                     failure(APIError("Data was nil!"))
                     return
                 }
-                let response = String(data: data, encoding: .utf8)
-                print(response ?? "No Response")
-
                 do {
                     let model = try JSONDecoder().decode(T.self, from: data)
                     success(model)
