@@ -6,7 +6,7 @@
 import UIKit
 
 protocol MealCollectionViewControllerDelegate: AnyObject {
-    func didSelectCell()
+    func didSelectCell(meal: Meal, imageUrl: String)
 }
 
 final class MealCollectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
@@ -36,24 +36,35 @@ final class MealCollectionViewController: UIViewController, UICollectionViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         title = viewModel.cousine
-        customView.collectionView.register(MealCollectionViewCell.self, forCellWithReuseIdentifier: MealCollectionViewCell.name)
+        customView.collectionView.register(
+            MealCollectionViewCell.self,
+            forCellWithReuseIdentifier: MealCollectionViewCell.name
+        )
         customView.collectionView.dataSource = self
         customView.collectionView.delegate = self
         navigationController?.navigationBar.barTintColor = .black
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         navigationController?.navigationBar.tintColor = .white
-        
+
+        viewModel.getMealFromRequest { [weak self] didSucceed in
+            guard didSucceed else { return }
+            self?.customView.collectionView.reloadData()
+        }
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.mealPhotos.count
+        return viewModel.meals.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MealCollectionViewCell.name, for: indexPath) as? MealCollectionViewCell else {
             fatalError("MealCollectionViewCell was not found")
         }
-        cell.mealImageView.image = viewModel.mealPhotos[indexPath.row]
+        let meal = viewModel.meals[indexPath.item]
+        let fullUrl = viewModel.baseUrl + meal.image
+        if let url = URL(string: fullUrl) {
+            cell.mealImageView.kf.setImage(with: url)
+        }
         return cell
     }
 }
@@ -81,6 +92,7 @@ extension MealCollectionViewController: UICollectionViewDelegateFlowLayout {
 extension MealCollectionViewController {
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        delegate?.didSelectCell()
+        let meal = viewModel.meals[indexPath.item]
+        delegate?.didSelectCell(meal: viewModel.meals[indexPath.item], imageUrl: viewModel.baseUrl + meal.image)
     }
 }
