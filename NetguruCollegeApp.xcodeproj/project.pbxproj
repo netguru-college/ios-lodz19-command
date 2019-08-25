@@ -23,6 +23,7 @@
 		CA45A99224ACF77CB15FD2FD /* Pods_NetguruCollegeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72E7FC592CE32179F357CF88 /* Pods_NetguruCollegeApp.framework */; };
 		D33AEFE723116F7E00F2A3A0 /* RandomMealRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33AEFE623116F7E00F2A3A0 /* RandomMealRequest.swift */; };
 		D340A21F231154DE002FC4AE /* CuisineGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D340A21E231154DE002FC4AE /* CuisineGenerator.swift */; };
+		D7AF430FD14ED4B0940AB675 /* Pods_NetguruCollegeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 517F04172590BE1A3DB67E52 /* Pods_NetguruCollegeApp.framework */; };
 		E8079EE2231146B6002E8B5E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8079EE1231146B6002E8B5E /* DetailViewController.swift */; };
 		E8079EE4231146BC002E8B5E /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8079EE3231146BC002E8B5E /* DetailViewModel.swift */; };
 		E8079EE8231146DD002E8B5E /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8079EE7231146DD002E8B5E /* DetailView.swift */; };
