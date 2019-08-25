@@ -34,6 +34,18 @@ final class DetailView: UIView {
         return stackView
     }()
 
+    private let stepsStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.spacing = 4
+        stackView.axis = .vertical
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        return stackView
+    }()
+
+    private lazy var firstLabel = makeLabel()
+    private lazy var secondLabel = makeLabel()
+    private lazy var thirdLabel = makeLabel()
+
     private let servingTimeRow: DetailInformationView = {
         let row = DetailInformationView(iconName: "dish.png")
         row.translatesAutoresizingMaskIntoConstraints = false
@@ -66,9 +78,20 @@ final class DetailView: UIView {
         titleLabel.text = meal.title
     }
 
+    func makeLabel() -> UILabel{
+        let lable = UILabel()
+        lable.text = "dsaff"
+        lable.translatesAutoresizingMaskIntoConstraints = false
+        lable.textColor = .white
+        return lable
+    }
+
     private func addSubviews() {
-        [imageView, titleLabel, detailsStackView].forEach(addSubview)
+        [imageView, titleLabel, detailsStackView, stepsStackView].forEach(addSubview)
         [servingTimeRow, readyInMinutesRow].forEach(detailsStackView.addArrangedSubview)
+
+        [firstLabel, secondLabel, thirdLabel].forEach(stepsStackView.addArrangedSubview)
+
     }
 
     private func setupConstraints() {
@@ -96,6 +119,13 @@ final class DetailView: UIView {
             detailsStackView.rightAnchor.constraint(equalTo: rightAnchor),
             detailsStackView.heightAnchor.constraint(equalToConstant: 30)
         ])
+
+        NSLayoutConstraint.activate([
+            stepsStackView.topAnchor.constraint(equalTo: detailsStackView.bottomAnchor, constant: 16),
+            stepsStackView.leftAnchor.constraint(equalTo: leftAnchor, constant: 16),
+            stepsStackView.rightAnchor.constraint(equalTo: rightAnchor),
+            stepsStackView.heightAnchor.constraint(equalToConstant: 90)
+            ])
 
         [servingTimeRow, readyInMinutesRow].forEach { $0.heightAnchor.constraint(equalToConstant: 30).isActive = true }
     }
