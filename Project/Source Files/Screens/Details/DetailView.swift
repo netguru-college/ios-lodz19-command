@@ -7,7 +7,7 @@ import UIKit
 
 final class DetailView: UIView {
     // MARK: properties
-    private var imageView: UIImageView = {
+    let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
