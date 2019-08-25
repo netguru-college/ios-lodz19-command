@@ -20,6 +20,7 @@ final class DetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = viewModel.meal.title
         guard let url = URL(string: viewModel.imageUrl ) else { return }
         customView.imageView.kf.setImage(with: url)
     }
