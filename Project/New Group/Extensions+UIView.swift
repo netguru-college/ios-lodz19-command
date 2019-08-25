@@ -16,7 +16,7 @@ extension UIView {
     ///
     /// - Parameters:
     ///   - style: Blur style.
-    internal func setBlurLoader(style: UIBlurEffect.Style = .dark) {
+    func setBlurLoader(style: UIBlurEffect.Style = .dark) {
         let blurEffect = UIBlurEffect(style: style)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.translatesAutoresizingMaskIntoConstraints = false
@@ -44,7 +44,7 @@ extension UIView {
         activityIndicatorView.startAnimating()
     }
 
-    internal func removeBlurLoader() {
+    func removeBlurLoader() {
         guard
             let blurLoader = viewWithTag(blurViewTag),
             contains(blurLoader)
