@@ -55,7 +55,6 @@
 		10DB353823117B8E004C7318 /* MealResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealResponse.swift; sourceTree = "<group>"; };
 		10DB353A231275BB004C7318 /* DetailInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInformationView.swift; sourceTree = "<group>"; };
 		390EB4B0C4DBA7673316CC4E /* Pods_NetguruCollegeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetguruCollegeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		517F04172590BE1A3DB67E52 /* Pods_NetguruCollegeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetguruCollegeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		696FE494217635CB005C9FDD /* NetguruCollegeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetguruCollegeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		696FE497217635CB005C9FDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		696FE49C217635CB005C9FDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -89,8 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47E17B746CDF77B96649839F /* Pods_NetguruCollegeApp.framework in Frameworks */,=
-				D7AF430FD14ED4B0940AB675 /* Pods_NetguruCollegeApp.framework in Frameworks */,
+				47E17B746CDF77B96649839F /* Pods_NetguruCollegeApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,7 +250,6 @@
 			isa = PBXGroup;
 			children = (
 				390EB4B0C4DBA7673316CC4E /* Pods_NetguruCollegeApp.framework */,
-				517F04172590BE1A3DB67E52 /* Pods_NetguruCollegeApp.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
