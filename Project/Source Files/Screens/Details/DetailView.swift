@@ -7,9 +7,18 @@ import UIKit
 
 final class DetailView: UIView {
     // MARK: properties
+    private let titleLabel: UILabel = {
+        let label = UILabel()
+        label.numberOfLines = 0
+        label.textAlignment = .center
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+
     let imageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFit
+        imageView.clipsToBounds = true
+        imageView.contentMode = .scaleAspectFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -51,24 +60,37 @@ final class DetailView: UIView {
 
         servingTimeRow.feedWithValueString(valueString: "\(meal.servings)")
         readyInMinutesRow.feedWithValueString(valueString: "\(meal.readyInMinutes)")
+
+        titleLabel.text = meal.title
     }
 
     private func addSubviews() {
         addSubview(imageView)
+        addSubview(titleLabel)
         addSubview(detailsStackView)
         [servingTimeRow, readyInMinutesRow].forEach(detailsStackView.addArrangedSubview)
     }
 
     private func setupConstraints() {
+        // pin title label
         NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 5),
-            imageView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            imageView.heightAnchor.constraint(equalToConstant: 100),
-            imageView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width * 0.7)
+            titleLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 10),
+            titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+            titleLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 10),
+            titleLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -10)
         ])
 
+        // pin image view
         NSLayoutConstraint.activate([
-                detailsStackView.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 8),
+            imageView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 12),
+            imageView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            imageView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.width * 0.6),
+            imageView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width * 0.6)
+        ])
+
+        // pin detail stack view
+        NSLayoutConstraint.activate([
+                detailsStackView.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 16),
                 detailsStackView.leftAnchor.constraint(equalTo: leftAnchor),
                 detailsStackView.rightAnchor.constraint(equalTo: rightAnchor),
                 detailsStackView.heightAnchor.constraint(equalToConstant: 90)
