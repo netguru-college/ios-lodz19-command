@@ -14,7 +14,6 @@
 		04FD8E34231292DB0020C221 /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FD8E33231292DA0020C221 /* Extensions+UIView.swift */; };
 		10DB353923117B8E004C7318 /* MealResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DB353823117B8E004C7318 /* MealResponse.swift */; };
 		10DB353B231275BB004C7318 /* DetailInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DB353A231275BB004C7318 /* DetailInformationView.swift */; };
-		47E17B746CDF77B96649839F /* Pods_NetguruCollegeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 390EB4B0C4DBA7673316CC4E /* Pods_NetguruCollegeApp.framework */; };
 		696FE498217635CB005C9FDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FE497217635CB005C9FDD /* AppDelegate.swift */; };
 		696FE49D217635CB005C9FDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 696FE49B217635CB005C9FDD /* Main.storyboard */; };
 		696FE49F217635D2005C9FDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 696FE49E217635D2005C9FDD /* Assets.xcassets */; };
@@ -23,7 +22,8 @@
 		CA45A99224ACF77CB15FD2FD /* Pods_NetguruCollegeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72E7FC592CE32179F357CF88 /* Pods_NetguruCollegeApp.framework */; };
 		D33AEFE723116F7E00F2A3A0 /* RandomMealRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33AEFE623116F7E00F2A3A0 /* RandomMealRequest.swift */; };
 		D340A21F231154DE002FC4AE /* CuisineGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D340A21E231154DE002FC4AE /* CuisineGenerator.swift */; };
-		D7AF430FD14ED4B0940AB675 /* Pods_NetguruCollegeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 517F04172590BE1A3DB67E52 /* Pods_NetguruCollegeApp.framework */; };
+		D385410D2312AE5C00F17F0F /* InstructionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D385410C2312AE5C00F17F0F /* InstructionRequest.swift */; };
+		D3B77ABF2312AFA900362D1C /* Instructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B77ABE2312AFA900362D1C /* Instructions.swift */; };
 		E8079EE2231146B6002E8B5E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8079EE1231146B6002E8B5E /* DetailViewController.swift */; };
 		E8079EE4231146BC002E8B5E /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8079EE3231146BC002E8B5E /* DetailViewModel.swift */; };
 		E8079EE8231146DD002E8B5E /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8079EE7231146DD002E8B5E /* DetailView.swift */; };
@@ -57,7 +57,6 @@
 		04FD8E33231292DA0020C221 /* Extensions+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIView.swift"; sourceTree = "<group>"; };
 		10DB353823117B8E004C7318 /* MealResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealResponse.swift; sourceTree = "<group>"; };
 		10DB353A231275BB004C7318 /* DetailInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInformationView.swift; sourceTree = "<group>"; };
-		390EB4B0C4DBA7673316CC4E /* Pods_NetguruCollegeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetguruCollegeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		696FE494217635CB005C9FDD /* NetguruCollegeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetguruCollegeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		696FE497217635CB005C9FDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		696FE49C217635CB005C9FDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -72,6 +71,8 @@
 		B70CCCFD923A49BB70EE7D09 /* Pods-NetguruCollegeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetguruCollegeApp.release.xcconfig"; path = "Target Support Files/Pods-NetguruCollegeApp/Pods-NetguruCollegeApp.release.xcconfig"; sourceTree = "<group>"; };
 		D33AEFE623116F7E00F2A3A0 /* RandomMealRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomMealRequest.swift; sourceTree = "<group>"; };
 		D340A21E231154DE002FC4AE /* CuisineGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuisineGenerator.swift; sourceTree = "<group>"; };
+		D385410C2312AE5C00F17F0F /* InstructionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionRequest.swift; sourceTree = "<group>"; };
+		D3B77ABE2312AFA900362D1C /* Instructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instructions.swift; sourceTree = "<group>"; };
 		E8079EE1231146B6002E8B5E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		E8079EE3231146BC002E8B5E /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		E8079EE7231146DD002E8B5E /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
@@ -255,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				D33AEFE623116F7E00F2A3A0 /* RandomMealRequest.swift */,
+				D385410C2312AE5C00F17F0F /* InstructionRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -283,6 +285,7 @@
 			children = (
 				E8079EEC23114A16002E8B5E /* Meal.swift */,
 				10DB353823117B8E004C7318 /* MealResponse.swift */,
+				D3B77ABE2312AFA900362D1C /* Instructions.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -481,6 +484,7 @@
 				E8079EE2231146B6002E8B5E /* DetailViewController.swift in Sources */,
 				04612AC6231169F300ABA33A /* MealCollectionViewCell.swift in Sources */,
 				E814F7E42310713600788FA9 /* APIError.swift in Sources */,
+				D3B77ABF2312AFA900362D1C /* Instructions.swift in Sources */,
 				E814F7F12310716D00788FA9 /* WelcomeView.swift in Sources */,
 				D340A21F231154DE002FC4AE /* CuisineGenerator.swift in Sources */,
 				E842F05B23116D010024BC88 /* AppFlowCoordinator.swift in Sources */,
@@ -492,6 +496,7 @@
 				10DB353923117B8E004C7318 /* MealResponse.swift in Sources */,
 				E8079EE4231146BC002E8B5E /* DetailViewModel.swift in Sources */,
 				E814F7E82310714300788FA9 /* WelcomeViewController.swift in Sources */,
+				D385410D2312AE5C00F17F0F /* InstructionRequest.swift in Sources */,
 				10DB353B231275BB004C7318 /* DetailInformationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
