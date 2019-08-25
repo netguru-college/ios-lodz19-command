@@ -49,6 +49,14 @@ extension AppFlowCoordinator: WelcomeViewControllerDelegate {
 extension AppFlowCoordinator: MealCollectionViewControllerDelegate {
 
     func didSelectCell() {
-        /// TODO: Run Details screen
+        let mockMealJson = Meal(id: 633508,
+                                image: "image2.jpg",
+                                imageUrls: ["image2.jpg"],
+                                readyInMinutes: 45,
+                                servings: 6,
+                                title: "Baked Cheese Manicotti"
+        )
+        let nextViewController = DetailViewController(viewModel: DefaultDetailViewModel(meal: mockMealJson))
+        rootViewController.show(nextViewController, sender: nil)
     }
 }

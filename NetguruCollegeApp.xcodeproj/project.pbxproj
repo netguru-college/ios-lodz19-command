@@ -11,19 +11,18 @@
 		04612AC6231169F300ABA33A /* MealCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04612AC2231169F300ABA33A /* MealCollectionViewCell.swift */; };
 		04612AC7231169F300ABA33A /* MealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04612AC3231169F300ABA33A /* MealView.swift */; };
 		04612AC8231169F300ABA33A /* MealViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04612AC4231169F300ABA33A /* MealViewModel.swift */; };
-		2E5CB7214B4A78251C20EA48 /* Pods_NetguruCollegeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5917DB1E95701B4EE6BDDCAF /* Pods_NetguruCollegeApp.framework */; };
+		10DB353923117B8E004C7318 /* MealResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DB353823117B8E004C7318 /* MealResponse.swift */; };
+		10DB353B231275BB004C7318 /* DetailInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DB353A231275BB004C7318 /* DetailInformationView.swift */; };
 		696FE498217635CB005C9FDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FE497217635CB005C9FDD /* AppDelegate.swift */; };
 		696FE49D217635CB005C9FDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 696FE49B217635CB005C9FDD /* Main.storyboard */; };
 		696FE49F217635D2005C9FDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 696FE49E217635D2005C9FDD /* Assets.xcassets */; };
 		696FE4A2217635D2005C9FDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 696FE4A0217635D2005C9FDD /* LaunchScreen.storyboard */; };
 		696FE4AD217635D2005C9FDD /* NetguruCollegeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FE4AC217635D2005C9FDD /* NetguruCollegeAppTests.swift */; };
 		D33AEFE723116F7E00F2A3A0 /* RandomMealRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33AEFE623116F7E00F2A3A0 /* RandomMealRequest.swift */; };
-		D33AEFE92311E9AD00F2A3A0 /* MealResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33AEFE82311E9AD00F2A3A0 /* MealResponse.swift */; };
 		D340A21F231154DE002FC4AE /* CuisineGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D340A21E231154DE002FC4AE /* CuisineGenerator.swift */; };
 		E8079EE2231146B6002E8B5E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8079EE1231146B6002E8B5E /* DetailViewController.swift */; };
 		E8079EE4231146BC002E8B5E /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8079EE3231146BC002E8B5E /* DetailViewModel.swift */; };
 		E8079EE8231146DD002E8B5E /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8079EE7231146DD002E8B5E /* DetailView.swift */; };
-		E8079EEA231147DB002E8B5E /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8079EE9231147DB002E8B5E /* DetailView.xib */; };
 		E8079EED23114A16002E8B5E /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8079EEC23114A16002E8B5E /* Meal.swift */; };
 		E814F7DD2310712B00788FA9 /* FlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E814F7DC2310712B00788FA9 /* FlowCoordinator.swift */; };
 		E814F7E22310713600788FA9 /* APIMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = E814F7DE2310713600788FA9 /* APIMethod.swift */; };
@@ -51,7 +50,8 @@
 		04612AC2231169F300ABA33A /* MealCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealCollectionViewCell.swift; sourceTree = "<group>"; };
 		04612AC3231169F300ABA33A /* MealView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealView.swift; sourceTree = "<group>"; };
 		04612AC4231169F300ABA33A /* MealViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealViewModel.swift; sourceTree = "<group>"; };
-		5917DB1E95701B4EE6BDDCAF /* Pods_NetguruCollegeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetguruCollegeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		10DB353823117B8E004C7318 /* MealResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealResponse.swift; sourceTree = "<group>"; };
+		10DB353A231275BB004C7318 /* DetailInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInformationView.swift; sourceTree = "<group>"; };
 		696FE494217635CB005C9FDD /* NetguruCollegeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetguruCollegeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		696FE497217635CB005C9FDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		696FE49C217635CB005C9FDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -64,12 +64,10 @@
 		70B9FAC81C5FF8A335FA5053 /* Pods-NetguruCollegeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetguruCollegeApp.debug.xcconfig"; path = "Target Support Files/Pods-NetguruCollegeApp/Pods-NetguruCollegeApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B70CCCFD923A49BB70EE7D09 /* Pods-NetguruCollegeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetguruCollegeApp.release.xcconfig"; path = "Target Support Files/Pods-NetguruCollegeApp/Pods-NetguruCollegeApp.release.xcconfig"; sourceTree = "<group>"; };
 		D33AEFE623116F7E00F2A3A0 /* RandomMealRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomMealRequest.swift; sourceTree = "<group>"; };
-		D33AEFE82311E9AD00F2A3A0 /* MealResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealResponse.swift; sourceTree = "<group>"; };
 		D340A21E231154DE002FC4AE /* CuisineGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuisineGenerator.swift; sourceTree = "<group>"; };
 		E8079EE1231146B6002E8B5E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		E8079EE3231146BC002E8B5E /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		E8079EE7231146DD002E8B5E /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
-		E8079EE9231147DB002E8B5E /* DetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailView.xib; sourceTree = "<group>"; };
 		E8079EEC23114A16002E8B5E /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		E814F7DC2310712B00788FA9 /* FlowCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowCoordinator.swift; sourceTree = "<group>"; };
 		E814F7DE2310713600788FA9 /* APIMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIMethod.swift; sourceTree = "<group>"; };
@@ -87,7 +85,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E5CB7214B4A78251C20EA48 /* Pods_NetguruCollegeApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,7 +245,6 @@
 		D78ED9CC3C02DDC356B00910 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5917DB1E95701B4EE6BDDCAF /* Pods_NetguruCollegeApp.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -259,7 +255,7 @@
 				E8079EE1231146B6002E8B5E /* DetailViewController.swift */,
 				E8079EE7231146DD002E8B5E /* DetailView.swift */,
 				E8079EE3231146BC002E8B5E /* DetailViewModel.swift */,
-				E8079EE9231147DB002E8B5E /* DetailView.xib */,
+				10DB353A231275BB004C7318 /* DetailInformationView.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -268,7 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				E8079EEC23114A16002E8B5E /* Meal.swift */,
-				D33AEFE82311E9AD00F2A3A0 /* MealResponse.swift */,
+				10DB353823117B8E004C7318 /* MealResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -378,7 +374,6 @@
 				696FE4A2217635D2005C9FDD /* LaunchScreen.storyboard in Resources */,
 				E814F7F32310717400788FA9 /* WelcomeView.xib in Resources */,
 				696FE49F217635D2005C9FDD /* Assets.xcassets in Resources */,
-				E8079EEA231147DB002E8B5E /* DetailView.xib in Resources */,
 				696FE49D217635CB005C9FDD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -443,7 +438,6 @@
 				E814F7DD2310712B00788FA9 /* FlowCoordinator.swift in Sources */,
 				04612AC8231169F300ABA33A /* MealViewModel.swift in Sources */,
 				696FE498217635CB005C9FDD /* AppDelegate.swift in Sources */,
-				D33AEFE92311E9AD00F2A3A0 /* MealResponse.swift in Sources */,
 				E814F7E22310713600788FA9 /* APIMethod.swift in Sources */,
 				E8079EE8231146DD002E8B5E /* DetailView.swift in Sources */,
 				04612AC7231169F300ABA33A /* MealView.swift in Sources */,
@@ -458,8 +452,10 @@
 				E814F7E32310713600788FA9 /* APIClient.swift in Sources */,
 				D33AEFE723116F7E00F2A3A0 /* RandomMealRequest.swift in Sources */,
 				E8079EED23114A16002E8B5E /* Meal.swift in Sources */,
+				10DB353923117B8E004C7318 /* MealResponse.swift in Sources */,
 				E8079EE4231146BC002E8B5E /* DetailViewModel.swift in Sources */,
 				E814F7E82310714300788FA9 /* WelcomeViewController.swift in Sources */,
+				10DB353B231275BB004C7318 /* DetailInformationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
