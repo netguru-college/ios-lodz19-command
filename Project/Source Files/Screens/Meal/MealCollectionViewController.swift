@@ -7,6 +7,7 @@ import UIKit
 
 protocol MealCollectionViewControllerDelegate: AnyObject {
     func didSelectCell(meal: Meal, imageUrl: String)
+    func didFailWithRequest()
 }
 
 final class MealCollectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
@@ -50,7 +51,13 @@ final class MealCollectionViewController: UIViewController, UICollectionViewData
         viewModel.getMealFromRequest { [weak self] didSucceed in
             DispatchQueue.main.async {
                 self?.customView.removeBlurLoader()
-                guard didSucceed else { return }
+                guard didSucceed else {
+                    self?.showAlert(title: "Oouch", message: "Something went wrong", alertActionTitle: "OK") { [weak self] in
+                        self?.delegate?.didFailWithRequest()
+                    }
+                    
+                    return
+                }
                 self?.customView.collectionView.reloadData()
             }
         }

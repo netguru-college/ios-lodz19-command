@@ -48,6 +48,9 @@ extension AppFlowCoordinator: WelcomeViewControllerDelegate {
 }
 
 extension AppFlowCoordinator: MealCollectionViewControllerDelegate {
+    func didFailWithRequest() {
+        (rootViewController as? UINavigationController)?.popViewController(animated: true)
+    }
 
     func didSelectCell(meal: Meal, imageUrl: String) {
        runDetailsScreen(with: meal, imageUrl: imageUrl)
