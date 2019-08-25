@@ -9,7 +9,7 @@ final class DetailView: UIView {
     // MARK: properties
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.numberOfLines = 1
+        label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
