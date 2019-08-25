@@ -2,8 +2,6 @@
 //  DetailInformationView.swift
 //  NetguruCollegeApp
 //
-
-
 import Foundation
 import UIKit
 
@@ -13,7 +11,7 @@ class DetailInformationView : UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    
+
     private let valueLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -23,7 +21,7 @@ class DetailInformationView : UIView {
     func feedWithValueString(valueString: String) {
         valueLabel.text = valueString
     }
-    
+
     init(titleString: String) {
         super.init(frame: .zero)
         titleLabel.text = titleString
