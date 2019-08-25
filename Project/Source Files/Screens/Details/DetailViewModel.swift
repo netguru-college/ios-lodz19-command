@@ -14,7 +14,6 @@ final class DefaultDetailViewModel: DetailViewModel {
     let imageUrl: String
     let meal: Meal
 
-
     init(meal: Meal, imageUrl: String ) {
         self.meal = meal
         self.imageUrl = imageUrl
