@@ -34,12 +34,12 @@ final class DetailView: UIView {
     }()
 
     private let servingTimeRow: DetailInformationView = {
-        let row = DetailInformationView(titleString: "Serving time: ")
+        let row = DetailInformationView(iconName: "plate.png")
         row.translatesAutoresizingMaskIntoConstraints = false
         return row
     }()
     private let readyInMinutesRow: DetailInformationView = {
-        let row = DetailInformationView(titleString: "Ready in")
+        let row = DetailInformationView(iconName: "clock.jpg")
         row.translatesAutoresizingMaskIntoConstraints = false
         return row
     }()
@@ -60,7 +60,7 @@ final class DetailView: UIView {
         let mealImage = UIImage(named: meal.image)
         imageView.image = mealImage
         servingTimeRow.feedWithValueString(valueString: "\(meal.servings)")
-        readyInMinutesRow.feedWithValueString(valueString: " \(meal.readyInMinutes) minutes.")
+        readyInMinutesRow.feedWithValueString(valueString: " \(meal.readyInMinutes) minutes")
         titleLabel.text = meal.title
     }
 

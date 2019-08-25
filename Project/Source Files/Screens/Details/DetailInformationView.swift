@@ -6,10 +6,12 @@ import Foundation
 import UIKit
 
 class DetailInformationView: UIView {
-    private let titleLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
+    private let imageLabel: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFit
+        imageView.backgroundColor = #colorLiteral(red: 0.9369841218, green: 0.3454609811, blue: 0.1157674268, alpha: 1)
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
     }()
 
     private let valueLabel: UILabel = {
@@ -22,10 +24,10 @@ class DetailInformationView: UIView {
         valueLabel.text = valueString
     }
 
-    init(titleString: String) {
+    init(iconName: String) {
         super.init(frame: .zero)
-        titleLabel.text = titleString
-
+        imageLabel.image = UIImage(named: iconName)
+        imageLabel.backgroundColor = #colorLiteral(red: 0.9369841218, green: 0.3454609811, blue: 0.1157674268, alpha: 1)
         setupConstraints()
     }
 
@@ -34,17 +36,26 @@ class DetailInformationView: UIView {
     }
 
     private func setupConstraints() {
-        addSubview(titleLabel)
+        addSubview(imageLabel)
         addSubview(valueLabel)
 
         NSLayoutConstraint.activate([
-                titleLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 15),
-                titleLabel.topAnchor.constraint(equalTo: self.topAnchor),
-                titleLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-                valueLabel.rightAnchor.constraint(equalTo: self.rightAnchor),
-                valueLabel.topAnchor.constraint(equalTo: self.topAnchor),
-                valueLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-                titleLabel.rightAnchor.constraint(equalTo: valueLabel.leftAnchor)
+            imageLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 15),
+            imageLabel.topAnchor.constraint(equalTo: self.topAnchor),
+            imageLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            valueLabel.rightAnchor.constraint(equalTo: self.rightAnchor),
+            valueLabel.topAnchor.constraint(equalTo: self.topAnchor),
+            valueLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            imageLabel.rightAnchor.constraint(equalTo: valueLabel.leftAnchor)
+//
+//                imageLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 15),
+//                imageLabel.topAnchor.constraint(equalTo: self.topAnchor),
+//                imageLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+//                imageLabel.heightAnchor.constraint(equalToConstant: 5),
+//                valueLabel.rightAnchor.constraint(equalTo: self.rightAnchor),
+//                valueLabel.topAnchor.constraint(equalTo: self.topAnchor),
+//                valueLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+//                imageLabel.rightAnchor.constraint(equalTo: valueLabel.leftAnchor)
         ])
     }
 }
