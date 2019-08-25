@@ -13,7 +13,7 @@ struct Meal: Decodable {
 
     let readyInMinutes: Int
 
-    let serving: Int
+    let servings: Int
 
     let title: String
 
